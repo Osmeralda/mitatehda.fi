@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:'Montserrat';
+    color: white;
+}
+html,body {
+    min-height: 100%;
+}
+body {
+    background: radial-gradient(at top left,rgb(0, 3, 155) 0%, rgb(19, 0, 128) 10%, rgb(60, 0, 128) 30%, rgb(0, 0, 156) 40%,rgb(0, 76, 121) 50%, rgb(1, 94, 1) 60%,rgb(1, 75, 75) 70%, rgb(0, 0, 110) 80%, rgb(0, 0, 107) 100% );
+    background-repeat: no-repeat;
+}
+p {
+    margin: 10px auto;
+    line-height:1.5em;
+}
+.layout {
+    max-width: 100%;
+    margin: 0 auto;
+}
+nav {        
+    font-size: large;
+    display: inline-block;
+    list-style-type: none;
+    text-align: left;
+    margin: 10px;
+    
+}
+nav .links {   
+    display: inline-block;
+    border-radius: 10px;
+}
+nav a {    
+    padding-right: 5fr;
+    text-align: left;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 30px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 3px solid transparent;
+    
+}
+nav a:hover {
+    border-color: tomato;
+}
+
+footer {
+    text-align: center;
+    color: rgb(182, 182, 182);
+    margin: 40px auto;    
+}
+nav .sidebar {
+    position: absolute;
+    font-size: 1.5em;
+    display: grid;
+    text-align: left;
+    margin-right: 0;
+    max-width: 2fr;  
+}
+nav .header {
+    font-size: 3em;
+    margin-top: 0;
+}
