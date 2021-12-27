@@ -1,0 +1,32 @@
+.keskus {    
+    text-align: center;
+    padding-left: 30%;
+}
+.keskus > h1 {
+    font-size: 5em;
+    margin-top: 80px;
+}
+.keskus > h2 {
+    font-size: 4em;
+    margin-top: 80px;
+}
+.keskus > h3 {
+    font-size: 3em;
+    font-weight: 400;
+}
+.yritykset {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 80px;
+    margin: 80px 20px;
+}
+.yritykset h3 {
+    text-align: center;
+    margin: 20px auto 0px;
+    font-weight: 500;
+}
+.yritykset p {
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 4px;
+}

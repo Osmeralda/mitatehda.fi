@@ -1,0 +1,28 @@
+.header {
+    padding-left: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    align-items: center;
+}
+.keskus h1 {
+    font-size: 5em;
+    margin-top: 80px;
+}
+.header h2 {
+    font-size: 4em;
+}
+.header h3 {
+    font-size: 3em;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.btn {
+    margin-left: 10px;
+    display: inline-block;
+    background: tomato;
+    padding: 5px 9px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: 500;
+}
