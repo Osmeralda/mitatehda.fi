@@ -13,7 +13,7 @@ html,body {
     min-height: 100%;
 }
 body {
-    background: radial-gradient(at top left,rgb(0, 3, 155) 0%, rgb(19, 0, 128) 10%, rgb(60, 0, 128) 30%, rgb(0, 0, 156) 40%,rgb(0, 76, 121) 50%, rgb(1, 94, 1) 60%,rgb(1, 75, 75) 70%, rgb(0, 0, 110) 80%, rgb(0, 0, 107) 100% );
+    background: radial-gradient(at top left, rgb(85, 85, 85) 0%, rgb(182, 182, 182) 100%);
     background-repeat: no-repeat;
 }
 p {

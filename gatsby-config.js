@@ -6,6 +6,9 @@
 
 module.exports = {
   /* Your site config here */
+  
+    pathPrefix: `mitatehda.fi`,
+  
   plugins: [ 
     {
       resolve: `gatsby-source-wordpress`,
