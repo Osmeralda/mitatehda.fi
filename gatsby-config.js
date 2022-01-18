@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `http://mitatehda.fi/graphql`,
+        url: process.env.WPGRAPHQL_URL ||  `http://mitatehda.fi/graphql`,
       }
     },  
     {
