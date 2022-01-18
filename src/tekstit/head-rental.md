@@ -1,7 +1,7 @@
 ---
 title: Hill Ski rental
 type: hiihto
-place: ruka
+place: levi
 slug: https://hillskirent.fi/ruka/vuokraamo/
 hinta: 100€
 update: 2021-12-19-14:05

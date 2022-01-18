@@ -5,7 +5,7 @@ import Sidebar from '../../components/Sidebar'
 import * as styles from '../../styles/keskukset.module.css'
 
 
-export default function Kelkkailu({ data }) {
+export default function Elamys({ data }) {
     console.log(data)
     const tekstit = data.allMarkdownRemark.nodes
 
@@ -13,7 +13,7 @@ export default function Kelkkailu({ data }) {
         <Layout>
         <Sidebar className={styles.Sidebar} /> 
         <div className={styles.keskus}>
-            <h1>Levin moottorikelkka vuokraamot</h1>
+            <h1>Kaikki Levin Elämykset</h1>
         </div>
         <div className={styles.yritykset}>
             {tekstit.map(teksti => (
@@ -32,10 +32,10 @@ export default function Kelkkailu({ data }) {
 // export page query
 
 export const query = graphql`
-query KelkkailuLevi {
+query ElamysLevi {
     allMarkdownRemark(
         sort: {order: ASC, fields: frontmatter___update}
-        filter: {frontmatter: {place: {eq: "levi"}, type: {eq: "kelkka"}}}
+        filter: {frontmatter: {place: {eq: ""}, type: {eq: ""}}}
       ) {
         nodes {
           frontmatter {

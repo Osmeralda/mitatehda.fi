@@ -13,7 +13,7 @@ export default function Kelkkailu({ data }) {
         <Layout>
         <Sidebar className={styles.Sidebar} /> 
         <div className={styles.keskus}>
-            <h1>Levin moottorikelkka vuokraamot</h1>
+            <h1>Levin vaellusreitit</h1>
         </div>
         <div className={styles.yritykset}>
             {tekstit.map(teksti => (
@@ -32,10 +32,10 @@ export default function Kelkkailu({ data }) {
 // export page query
 
 export const query = graphql`
-query KelkkailuLevi {
+query VaellusLevi {
     allMarkdownRemark(
         sort: {order: ASC, fields: frontmatter___update}
-        filter: {frontmatter: {place: {eq: "levi"}, type: {eq: "kelkka"}}}
+        filter: {frontmatter: {place: {eq: "levi"}, type: {eq: "vaellus"}}}
       ) {
         nodes {
           frontmatter {

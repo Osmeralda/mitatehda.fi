@@ -22,15 +22,15 @@ export default function Navbar() {
         <nav>
             <h1 className='header'>{title}</h1>
             <div className="links">
-                <Link to="/">Koti</Link>
-                <Link to="/ruka">Ruka</Link>
-                <Link to="/levi">Levi</Link>
-                <Link to="/yllas">Ylläs</Link>
-                <Link to="/syote">Syöte</Link>
-                <Link to="/pyha">Pyhä</Link>
-                <Link to="/saariselka">Saariselkä</Link>
-                <Link to="/">Hetta/Pallas</Link>
-                <Link to="/yhteystiedot">Yhteystiedot</Link>
+                <Link to="/" activeClassName={"active"}>Koti</Link>
+                <Link to="/ruka" activeClassName={"active"}>Ruka</Link>
+                <Link to="/levi" activeClassName={"active"}>Levi</Link>
+                <Link to="/yllas" activeClassName={"active"}>Ylläs</Link>
+                <Link to="/syote" activeClassName={"active"}>Syöte</Link>
+                <Link to="/pyha" activeClassName={"active"}>Pyhä</Link>
+                <Link to="/saariselka" activeClassName={"active"}>Saariselkä</Link>
+                
+                <Link to="/yhteystiedot" activeClassName={"active"}>Yhteystiedot</Link>
             </div>           
         </nav>            
     )

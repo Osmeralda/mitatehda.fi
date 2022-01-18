@@ -5,7 +5,7 @@ import Sidebar from '../../components/Sidebar'
 import * as styles from '../../styles/keskukset.module.css'
 
 
-export default function Ruka({ data }) {
+export default function Kelkkailu({ data }) {
     console.log(data)
     const tekstit = data.allMarkdownRemark.nodes
 
@@ -35,7 +35,7 @@ export const query = graphql`
 query TekstiRuka {
     allMarkdownRemark(
         sort: {order: ASC, fields: frontmatter___update}
-        filter: {tableOfContents: {eq: ""}}
+        filter: {frontmatter: {place: {eq: "ruka"}, type: {eq: "kelkka"}}}
       ) {
         nodes {
           frontmatter {
@@ -46,5 +46,6 @@ query TekstiRuka {
           }
         }
       }
-  } 
+    }
+    
 `
