@@ -10,12 +10,7 @@ module.exports = {
     pathPrefix: `mitatehda.fi`,
   
   plugins: [ 
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: process.env.WPGRAPHQL_URL ||  `http://mitatehda.fi/graphql`,
-      }
-    },  
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -36,7 +31,7 @@ module.exports = {
   siteMetadata: {
     title: 'MitäTehdä.fi',
     description: 'Kaikki aktiviteetit mitä pohjoisessa voi tehdä',
-    copyright: 'Copyright @Oskar.IO',
+    copyright: 'Copyright @Oskari Kurtti',
     id: '00212',
     slug: 'metadata'
   }

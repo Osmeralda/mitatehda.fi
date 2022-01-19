@@ -1,6 +1,7 @@
 .keskus {    
     text-align: center;
-    padding-left: 30%;
+    padding-left: 210px;
+    margin-right: 210px;
 }
 .keskus > h1 {
     font-size: 5em;

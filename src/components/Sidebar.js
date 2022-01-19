@@ -1,6 +1,7 @@
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import React from 'react'
 import * as styles from '../styles/global.css'
+import { Card, CardTitle, CardBody } from 'reactstrap'
 
 
 export default function Sidebar() {
@@ -8,15 +9,29 @@ export default function Sidebar() {
         <nav>
             
 
-            <div className='sidebar' >
-                <Link to="laskettelu" activeClassName={"active"}>Laskettelu</Link>
-                <Link to="kelkkailu" activeClassName={"active"}>Kelkkailu</Link>
-                <Link to="hiihto" activeClassName={"active"}>Hiihto</Link>
-                <Link to="vaellus" activeClassName={"active"}>Vaellusreitit</Link>
-                <Link to="kaupat" activeClassName={"active"}>Kaupat</Link>
-                <Link to="elamys" activeClassName={"active"}>Elämykset</Link>
-                <Link to="paljut" activeClassName={"active"}>Paljut</Link>
-            
+            <div className='sidebar'>
+
+
+                <Link to="/ruka/laskettelu">Laskettelu</Link>
+                <Link to="/ruka/kelkkailu">Kelkkailu</Link>
+                <Link to="/ruka/hiihto">Hiihto</Link>
+                <Link to="/ruka/vaellus">Vaellusreitit</Link>
+                <Link to="/ruka/kaupat">Kaupat</Link>
+                <Link to="/ruka/elamys">Elämykset</Link>
+                <Link to="/ruka/paljut">Paljut</Link>
+                <Card>
+                    <CardBody>
+                        <CardTitle className='text-center text-uppercase'>
+                        Advertisement
+                        </CardTitle>
+                        <img
+                        src="https://via.placeholder.com/200x400"
+                        alt="advert"
+                        style={{ width: '100%'}}
+                        />
+                    </CardBody>
+                </Card>
+
 
            
             </div>
@@ -24,3 +39,11 @@ export default function Sidebar() {
     )
 }
 
+/*const sidebarQuery = graphql`
+query sidebarQuery {
+    allMarkdownRemark(
+        sort:
+    )
+}
+`
+*/
