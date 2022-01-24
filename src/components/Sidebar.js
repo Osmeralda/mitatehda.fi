@@ -1,25 +1,15 @@
 import { Link, graphql } from 'gatsby'
 import React from 'react'
 import * as styles from '../styles/global.css'
-import { Card, CardTitle, CardBody } from 'reactstrap'
+import { Card, CardTitle, CardBody, Container } from 'reactstrap'
 
 
 export default function Sidebar() {
     return (
+        <Container >
         <nav>
-            
-
-            <div className='sidebar'>
-
-
-                <Link to="/ruka/laskettelu">Laskettelu</Link>
-                <Link to="/ruka/kelkkailu">Kelkkailu</Link>
-                <Link to="/ruka/hiihto">Hiihto</Link>
-                <Link to="/ruka/vaellus">Vaellusreitit</Link>
-                <Link to="/ruka/kaupat">Kaupat</Link>
-                <Link to="/ruka/elamys">Elämykset</Link>
-                <Link to="/ruka/paljut">Paljut</Link>
-                <Card>
+            <div className={'adBanner'}>
+                <Card >
                     <CardBody>
                         <CardTitle className='text-center text-uppercase'>
                         Advertisement
@@ -30,20 +20,10 @@ export default function Sidebar() {
                         style={{ width: '100%'}}
                         />
                     </CardBody>
-                </Card>
-
-
-           
+                </Card>           
             </div>
         </nav>
+        </Container>
     )
 }
 
-/*const sidebarQuery = graphql`
-query sidebarQuery {
-    allMarkdownRemark(
-        sort:
-    )
-}
-`
-*/

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import * as styles from '../styles/global.css'
 import reactDom from 'react-dom'
+import { Container } from 'reactstrap'
 
 export default function Navbar() {
     const data = useStaticQuery(graphql`
@@ -19,6 +20,7 @@ export default function Navbar() {
 
     
     return (
+        <Container>
         <nav>
             <Link to="/" className='header'>{title}</Link>
             
@@ -33,6 +35,6 @@ export default function Navbar() {
                 <Link to="/yhteystiedot" activeClassName={"active"}>Yhteystiedot</Link>
             </div>           
         </nav> 
-               
+        </Container>     
     )
     }

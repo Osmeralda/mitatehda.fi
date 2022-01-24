@@ -57,17 +57,26 @@ nav a.active {
 footer {
     text-align: center;
     color: rgb(182, 182, 182);
-    margin: 40px auto;    
+    margin: 40px auto;
+    position:sticky;   
 }
 nav .sidebar {
     position: absolute;
-    font-size: 1.5em;
+    font-size: auto;
     display: grid;
     text-align: left;
     margin-right: 0;
-    max-width: 2fr;  
+    max-width: 2fr;
 }
 nav .header {
     font-size: 3em;
     margin-top: 0;
+}
+nav.adBanner {
+    position: absolute;
+    font-size: auto;
+    display: grid;
+    text-align: left;
+    margin-right: 0;
+    max-width: 2fr;
 }

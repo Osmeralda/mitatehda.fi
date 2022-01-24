@@ -20,7 +20,8 @@ export default function Kelkkailu({ data }) {
                 <Link to={teksti.frontmatter.slug} key={teksti.id}>
                     <div>
                         <h3>{ teksti.frontmatter.title }</h3>
-                        <p>Hinta alkaen { teksti.frontmatter.hinta }</p>
+                        <p>2h vuokraus alkaen: { teksti.frontmatter.hinta }</p>
+                        <p>Tuotteet { teksti.frontmatter.products }</p>
                     </div>
                 </Link>
             ))}
@@ -43,6 +44,7 @@ query KelkkailuLevi {
             title
             type
             slug
+            products
           }
         }
       }

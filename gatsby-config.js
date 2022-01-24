@@ -6,9 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  
-    pathPrefix: `mitatehda.fi`,
-  
+    
   plugins: [ 
     `gatsby-plugin-react-helmet`,
     {

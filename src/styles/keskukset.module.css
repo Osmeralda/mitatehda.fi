@@ -1,24 +1,30 @@
 .keskus {    
+    size: auto;
     text-align: center;
     padding-left: 210px;
-    margin-right: 210px;
+    padding-right: 100px;
 }
 .keskus > h1 {
-    font-size: 5em;
+    size: auto;
+    font-size: auto;
     margin-top: 80px;
 }
 .keskus > h2 {
-    font-size: 4em;
+    size: auto;
+    font-size: auto;
     margin-top: 80px;
 }
 .keskus > h3 {
-    font-size: 3em;
+    size: auto;
+    font-size: auto;
     font-weight: 400;
 }
 .yritykset {
+    padding-left: 210px;
+    padding-right: 100px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 80px;
+    grid-template-columns: auto;
+   
     margin: 80px 20px;
 }
 .yritykset h3 {

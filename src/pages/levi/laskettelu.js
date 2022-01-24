@@ -21,6 +21,7 @@ export default function Laskettelu({ data }) {
                     <div>
                         <h3>{ teksti.frontmatter.title }</h3>
                         <p>Hinta alkaen { teksti.frontmatter.hinta }</p>
+                        <p>Tuotteet { teksti.frontmatter.products }</p>
                     </div>
                 </Link>
             ))}
@@ -43,6 +44,7 @@ query LasketteluLevi {
             title
             type
             slug
+            products
           }
         }
       }

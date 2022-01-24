@@ -16,7 +16,7 @@ export default function Footer() {
     const {copyright} = data.site.siteMetadata
 
     return (
-        <div>
+        <div className='footer'>
             <footer>
                <p>{copyright}</p> 
             </footer>

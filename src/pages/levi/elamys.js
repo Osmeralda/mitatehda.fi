@@ -1,7 +1,7 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
 import Layout from '../../components/Layout'
-import Sidebar from '../../components/Sidebar'
+import {Card, CardBody, CardTitle} from 'reactstrap'
 import * as styles from '../../styles/keskukset.module.css'
 
 
@@ -11,7 +11,37 @@ export default function Elamys({ data }) {
 
     return (
         <Layout>
-        <Sidebar className={styles.Sidebar} /> 
+                    <nav>
+            
+
+            <div className='sidebar'>
+
+
+                <Link to="/levi/laskettelu">Laskettelu</Link>
+                <Link to="/levi/kelkkailu">Kelkkailu</Link>
+                <Link to="/levi/hiihto">Hiihto</Link>
+                <Link to="/levi/vaellus">Vaellusreitit</Link>
+                <Link to="/levi/kaupat">Kaupat</Link>
+                <Link to="/levi/elamys">Elämykset</Link>
+                <Link to="/levi/paljut">Paljut</Link>
+                <Card>
+                    <CardBody>
+                        <CardTitle className='text-center text-uppercase'>
+                        Advertisement
+                        </CardTitle>
+                        <img
+                        src="https://via.placeholder.com/200x400"
+                        alt="advert"
+                        style={{ width: '100%'}}
+                        />
+                    </CardBody>
+                </Card>
+
+
+           
+            </div>
+        </nav>
+    
         <div className={styles.keskus}>
             <h1>Kaikki Levin Elämykset</h1>
         </div>
@@ -21,6 +51,7 @@ export default function Elamys({ data }) {
                     <div>
                         <h3>{ teksti.frontmatter.title }</h3>
                         <p>Hinta alkaen { teksti.frontmatter.hinta }</p>
+                        <p>Tuotteet { teksti.frontmatter.products }</p>
                     </div>
                 </Link>
             ))}
@@ -43,6 +74,7 @@ query ElamysLevi {
             title
             type
             slug
+            products
           }
         }
       }
