@@ -10,11 +10,11 @@
     color: white;
 }
 html,body {
-    min-height: 100%;
+    min-height: 100vh;
 }
 body {
     background: radial-gradient(at top left, rgb(85, 85, 85) 0%, rgb(182, 182, 182) 100%);
-    background-repeat: no-repeat;
+    background-repeat:unset;
 }
 p {
     margin: 10px auto;
@@ -45,7 +45,7 @@ nav a {
     font-weight: 600;
     padding-bottom: 0px;
     border-bottom: 3px solid transparent;
-    
+    transition: 200ms;    
 }
 nav a:hover {
     border-color: tomato;
@@ -55,10 +55,12 @@ nav a.active {
 }
 
 footer {
+    width: 100%;
     text-align: center;
     color: rgb(182, 182, 182);
     margin: 40px auto;
-    position:sticky;   
+    position: sticky;
+    background-color: transparent;
 }
 nav .sidebar {
     position: absolute;
@@ -80,3 +82,31 @@ nav.adBanner {
     margin-right: 0;
     max-width: 2fr;
 }
+.drpdwn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    color: tomato;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: transform 300ms;
+}
+.ul {
+    list-style-type: none;
+    background: grey;
+    border: 3px solid;
+    border-radius: 10px;
+    border-color: tomato;
+    
+}
+.li {
+    margin-top: 1rem;
+}
+

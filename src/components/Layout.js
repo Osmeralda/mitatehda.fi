@@ -4,6 +4,8 @@ import Footer from './Footer'
 import * as styles from '../styles/global.css'
 import { Container } from 'reactstrap'
 
+
+
 export default function Layout({ children }) {
     return (
         <div className="layout">
@@ -13,6 +15,9 @@ export default function Layout({ children }) {
             { children }    
         </div>
         </Container>
+        <div>
+            
+        </div>
         <Footer />
         </div>
     )

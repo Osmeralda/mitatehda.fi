@@ -1,6 +1,7 @@
 import React from 'react'
 import * as styles from '../styles/global.css'
 import { graphql, useStaticQuery } from 'gatsby'
+import { Container } from 'react-bootstrap'
 
 export default function Footer() {
     const data = useStaticQuery(graphql`
@@ -16,10 +17,12 @@ export default function Footer() {
     const {copyright} = data.site.siteMetadata
 
     return (
+      <Container>
         <div className='footer'>
             <footer>
-               <p>{copyright}</p> 
+               {/*<p>{copyright}</p> */}
             </footer>
         </div>
+      </Container>
     )
 }

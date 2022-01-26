@@ -18,11 +18,10 @@
     margin-bottom: 20px;
 }
 .btn {
-    margin-left: 10px;
-    display: inline-block;
-    background: tomato;
-    padding: 5px 9px;
-    border-radius: 10px;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    color: tomato;
+    justify-content: space-around;
     font-weight: 500;
 }

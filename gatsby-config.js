@@ -9,6 +9,7 @@ module.exports = {
     
   plugins: [ 
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -18,6 +19,8 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

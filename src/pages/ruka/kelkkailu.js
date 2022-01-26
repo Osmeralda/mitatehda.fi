@@ -5,6 +5,7 @@ import * as styles from '../../styles/keskukset.module.css'
 import {Card, CardBody, CardTitle} from 'reactstrap'
 import { Helmet } from 'react-helmet'
 import { Container, Col, Row, Image } from 'react-bootstrap'
+import GoogleAd from '../../components/Banner'
 
 
 export default function Kelkkailu({ data }) {
@@ -13,7 +14,7 @@ export default function Kelkkailu({ data }) {
 
     return (
         <Layout>
-            <Container sm={4} md={4} lg={4}>
+            <Container>
                 <nav className='text-left'>
              <div className='sidebar'>
 
@@ -24,20 +25,6 @@ export default function Kelkkailu({ data }) {
                         <Row><Link to="/ruka/kaupat">Kaupat</Link></Row>
                         <Row><Link to="/ruka/elamys">Elämykset</Link></Row>
                         <Row><Link to="/ruka/paljut">Paljut</Link></Row>
-                        <Card>
-                            <CardBody>
-                                <CardTitle className='text-uppercase'>
-                                Advertisement
-                                </CardTitle>
-                                <Image
-                                src="https://via.placeholder.com/100x400"
-                                alt="advert"
-                                fluid
-                                style={{ width: '100%'}}
-                                />
-                            </CardBody>
-                        </Card>
-
             </div>
                 </nav>
             </Container>
@@ -48,16 +35,17 @@ export default function Kelkkailu({ data }) {
         </Helmet>
 
     </div>
-        <Container>
-            <Row>
+        
+            
                 <div className={styles.keskus}>
+                    <Container>
                     <h1>Rukan moottorikelkka vuokraamot</h1>
+                    </Container>
                 </div>
-            </Row>
-            <Row>
+                
                 <div className={styles.yritykset}>
                     {tekstit.map(teksti => (
-                        <Link to={teksti.frontmatter.slug} key={teksti.id}>
+                        <Link to={teksti.frontmatter.slug} key={teksti.id} className={styles.yrityslinkki}>
                             <div>
                                 <h3>{ teksti.frontmatter.title }</h3>
                                 <p>2h vuokraus alkaen: { teksti.frontmatter.hinta }</p>
@@ -65,10 +53,21 @@ export default function Kelkkailu({ data }) {
                             </div>
                         </Link>
                     ))}
-                    
+                     </div>
+                     
+            
+        <div className={styles.ads}>
+                    <Container>
+                    <Card>
+                        <CardBody>
+                        <CardTitle>
+                                Advertisement
+                                </CardTitle>
+                <GoogleAd client="ca-pub-4371075580898574" />
+                        </CardBody>
+                </Card>
+                </Container>
                 </div>
-            </Row>
-        </Container>
         </Layout>
     )
 }
