@@ -83,6 +83,8 @@ nav.adBanner {
     max-width: 2fr;
 }
 .drpdwn {
+    margin: 0;
+    background-color:rgba(0, 0, 0, 0.9);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,6 +93,8 @@ nav.adBanner {
     height: 70vh;
     width: 100%;
     overflow: hidden;
+
+    border-color: tomato;
     color: tomato;
     font-weight: 500;
     position: absolute;
@@ -99,12 +103,7 @@ nav.adBanner {
     transition: transform 300ms;
 }
 .ul {
-    list-style-type: none;
-    background: grey;
-    border: 3px solid;
-    border-radius: 10px;
-    border-color: tomato;
-    
+    list-style-type: none;    
 }
 .li {
     margin-top: 1rem;

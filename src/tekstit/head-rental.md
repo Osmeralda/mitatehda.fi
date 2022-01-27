@@ -1,11 +1,23 @@
 ---
 title: Hill Ski rental
-type: hiihto
-place: levi
+snowmobile: ei
+husky: ei
+reindeer: ei
+dhski: ye
+xcski: ye
+icefishing: ei
+palju: ei
+ruka: ye
+levi: ye
+yllas: ye
+syote: ei
+pyha: ei
+saariselka: ei
+xchinta: 28€
+hinta: 29€
 slug: https://hillskirent.fi/ruka/vuokraamo/
-hinta: 100€
 update: 2021-12-19-14:05
-products: Vuokraus
+products: Lasku-, maastohiihto välinevuokraus, Huolto, pyörävuokraus
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo viverra maecenas accumsan lacus vel facilisis. Turpis egestas sed tempus urna. Fermentum odio eu feugiat pretium. Consectetur adipiscing elit duis tristique sollicitudin nibh. Eu volutpat odio facilisis mauris sit amet massa. Eu scelerisque felis imperdiet proin fermentum leo vel orci. Convallis tellus id interdum velit laoreet id donec ultrices. Varius duis at consectetur lorem donec massa sapien. Ac tincidunt vitae semper quis lectus nulla at volutpat. Amet nulla facilisi morbi tempus iaculis. Eu volutpat odio facilisis mauris sit amet. Auctor eu augue ut lectus arcu bibendum. In vitae turpis massa sed elementum tempus. Metus aliquam eleifend mi in. Feugiat in fermentum posuere urna nec tincidunt praesent semper feugiat.

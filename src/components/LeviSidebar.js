@@ -48,7 +48,7 @@ const MenuLinks = styled.nav`
 
 transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
 `
-const RukaSidebar = () => {
+const LeviSidebar = () => {
   const [nav, showNav] = useState(false)
 
  
@@ -64,25 +64,25 @@ const RukaSidebar = () => {
         <MenuLinks nav={nav} className='drpdwn'>
         <ul className='ul'>
           <li className='li'>
-          <Link to="/ruka/laskettelu">Laskettelu</Link>
+          <Link to="/levi/laskettelu">Laskettelu</Link>
           </li>
           <li className='li'>
-          <Link to="/ruka/kelkkailu">Kelkkailu</Link>
+          <Link to="/levi/kelkkailu">Kelkkailu</Link>
           </li>
           <li className='li'>
-          <Link to="/ruka/hiihto">Hiihto</Link>
+          <Link to="/levi/hiihto">Hiihto</Link>
           </li>
           <li className='li'>
-          <Link to="/ruka/vaellus">Vaellusreitit</Link>
+          <Link to="/levi/vaellus">Vaellusreitit</Link>
           </li>
           <li className='li'>
-          <Link to="/ruka/kaupat">Kaupat</Link>
+          <Link to="/levi/kaupat">Kaupat</Link>
           </li>
           <li className='li'>
-          <Link to="/ruka/ravintolat">Ravintolat</Link>
+          <Link to="/levi/ravintolat">Ravintolat</Link>
           </li>
           <li className='li'>
-          <Link to="/ruka/paljut">Kylpytynnyrit</Link>
+          <Link to="/levi/paljut">Kylpytynnyrit</Link>
           </li>
         </ul>
         </MenuLinks>
@@ -90,4 +90,4 @@ const RukaSidebar = () => {
     )
 }
 
-export default RukaSidebar
+export default LeviSidebar

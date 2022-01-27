@@ -1,7 +1,18 @@
 ---
 title: Stella Polaris
-type: kelkka
-place: ruka
+snowmobile: ye
+husky: ei
+reindeer: ei
+dhski: ei
+xcski: ei
+icefishing: ei
+palju: ei
+ruka: ye
+levi: ei
+yllas: ei
+syote: ei
+pyha: ei
+saariselka: ei
 slug: https://stellapolaris.fi/
 hinta: 85€
 update: 2021-12-19-12:43

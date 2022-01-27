@@ -12,7 +12,17 @@ export default function Home() {
   return (
     <div>
     <Layout>
-
+    <Helmet>
+        <title>MitäTehdä.fi Ruka</title>
+        <meta name="description" content="Kaikki Rukan ja lähialueiden vaellusreitit kätevästi yhdellä sivulla!" />
+        <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, pyhä, levi, kittilä, saariselkä, ivalo, ylläs, vaellusreitit, kävelyreitit, Valtavaara, pyhävaara, riisitunturi, posio, kaupat, vuokraamot, ravintolat, laskettelu, hiihto, paljut, elämykset, elämys" />
+        <meta property="og:title" content="MitäTehdä.fi" />
+        <meta property="og:type" content="Kaikki pohjois-Suomen aktiviteetit listattuna" />
+        <meta property='og:image' content='' />
+        <meta property='og:locale' content='fi_FI' />
+        <meta property='og:url' content='www.mitatehda.fi/ruka/vaellus' />
+        <link rel="canonical" href="www.mitatehda.fi/ruka/vaellus" />
+    </Helmet>
       <div className={styles.keskus}>
         <Container>
           <h1 className={styles.keskus}>

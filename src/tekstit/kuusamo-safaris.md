@@ -1,7 +1,18 @@
 ---
 title: Kuusamo Safaris
-type: kelkka , hiihto
-place: ruka
+snowmobile: ye
+husky: ye
+reindeer: ye
+dhski: ei
+xcski: ye
+icefishing: ye
+palju: ei
+ruka: ye
+levi: ei
+yllas: ei
+syote: ei
+pyha: ei
+saariselka: ei
 slug: http://www.kuusamosafaris.fi/
 hinta: 65€
 update: 2021-12-19-13:08

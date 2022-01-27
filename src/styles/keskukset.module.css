@@ -11,12 +11,13 @@
 .keskus > h2 {
     size: auto;
     font-size: auto;
-    margin-top: 80px;
+    margin: 1em;
 }
 .keskus > h3 {
     size: auto;
     font-size: auto;
     font-weight: 400;
+    margin: 1em;
 }
 .yritykset {
     margin-left: auto;
@@ -56,30 +57,8 @@
     text-align: center;
     align-items: center;
 }
-.dropdwn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 70vh;
-    width: 100%;
-    overflow: hidden;
-    color: tomato;
-    font-weight: 500;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transition: transform 300ms;
-}
-.ul {
-    list-style-type: none;
-    background: grey;
-    border: 3px solid;
-    border-radius: 10px;
-    border-color: tomato;
-    
-}
-.li {
-    margin-top: 1rem;
+.btn {
+    padding: 0.1em;
+    background-color: tomato;
+    border-radius: 3px;
 }

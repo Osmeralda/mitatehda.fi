@@ -1,7 +1,18 @@
 ---
 title: S Pätsi racing
-type: kelkka
-place: ruka
+snowmobile: ye
+husky: ei
+reindeer: ei
+dhski: ei
+xcski: ei
+icefishing: ei
+palju: ei
+ruka: ye
+levi: ei
+yllas: ei
+syote: ei
+pyha: ei
+saariselka: ei
 slug: https://www.patsiracing.com/
 hinta: 70€
 update: 2021-12-19-13:08
