@@ -2,22 +2,26 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import * as styles from '../styles/global.css'
-import { Container } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
 
 
 
 export default function Layout({ children }) {
     return (
+        
         <div className="layout">
         <Navbar />
-        <Container lg={{ span:4, offset:4 }}>
+        <Container >
+        <Row>
+            <Col></Col>
+            <Col>
         <div className="content">
-            { children }    
+            { children }                
         </div>
+        </Col>
+        <Col></Col>
+        </Row>
         </Container>
-        <div>
-            
-        </div>
         <Footer />
         </div>
     )

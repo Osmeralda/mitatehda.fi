@@ -39,7 +39,7 @@ export default function LasketteluRuka({ data }) {
                         <Link to={teksti.frontmatter.slug} key={teksti.id} className={styles.yrityslinkki}>
                             <div>
                                 <h3>{ teksti.frontmatter.title }</h3>
-                                <p>3h välinesetti: { teksti.frontmatter.hinta }</p>
+                                <p>3h välinesetti: { teksti.frontmatter.dhhinta }</p>
                                 <p>Tuotteet: { teksti.frontmatter.products }</p>
                             </div>
                         </Link>
@@ -60,6 +60,8 @@ export default function LasketteluRuka({ data }) {
             <div className={styles.keskus}>
                 <h2>Rukan rinnekartta</h2>
                 <Link to="https://www.ruka.fi/fi/hiihtokeskus/rinteet" className={styles.btn}>Klikkaa tästä rinnekarttaan</Link>
+                <h2>Osta hissiliput Rukan sivuilta</h2>
+                <Link to="https://www.ruka.fi/fi/hiihtokeskus/lippukauppa/hissiliput" className={styles.btn}>Painamalla tästä</Link>
             </div>
         </Layout>
     )
@@ -80,6 +82,7 @@ query lasketteluRuka {
             title
             ruka
             dhski
+            dhhinta
             update
             products
           }

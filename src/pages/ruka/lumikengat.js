@@ -17,20 +17,20 @@ export default function LasketteluRuka({ data }) {
         <Layout>
     <Helmet>
         <title>MitäTehdä.fi Ruka</title>
-        <meta name="description" content="Kaikki Rukan kaupat ja matkamuistomyymälät kätevästi yhdellä sivulla!" />
-        <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, kaupat, vuokraamot, ravintolat, matkamuistomyymälät, laskettelu, hiihto, paljut, elämykset, elämys" />
+        <meta name="description" content="Kaikki Rukan lumikenkä vuokraamot kätevästi yhdellä sivulla!" />
+        <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, vaellusreitit, kävelyreitit, kaupat, vuokraamot, ravintolat, laskettelu, hiihto, paljut, elämykset, elämys" />
         <meta property="og:title" content="MitäTehdä.fi" />
         <meta property="og:type" content="Kaikki pohjois-Suomen aktiviteetit listattuna" />
         <meta property='og:image' content='' />
         <meta property='og:locale' content='fi_FI' />
-        <meta property='og:url' content='www.mitatehda.fi/ruka/kaupat' />
-        <link rel="canonical" href="www.mitatehda.fi/ruka/kaupat" />
+        <meta property='og:url' content='www.mitatehda.fi/ruka/lumikengat' />
+        <link rel="canonical" href="www.mitatehda.fi/ruka/lumikengat" />
     </Helmet>
             <RukaSidebar />
 
                 <div className={styles.keskus}>
                     <Container>
-                    <h1>Rukan kaupat ja matkamuistomyymälät</h1>
+                    <h1>Rukan Lumikenkävuokraamot</h1>
                     </Container>
                 </div>
                 
@@ -39,6 +39,7 @@ export default function LasketteluRuka({ data }) {
                         <Link to={teksti.frontmatter.slug} key={teksti.id} className={styles.yrityslinkki}>
                             <div>
                                 <h3>{ teksti.frontmatter.title }</h3>
+                                <p>3h lumikengät: { teksti.frontmatter.lumikenkahinta }</p>
                                 <p>Tuotteet: { teksti.frontmatter.products }</p>
                             </div>
                         </Link>
@@ -56,6 +57,7 @@ export default function LasketteluRuka({ data }) {
                 </Card>
                 </Container>
                 </div>
+
         </Layout>
     )
 }
@@ -63,10 +65,10 @@ export default function LasketteluRuka({ data }) {
 // export page query
 
 export const query = graphql`
-query kaupatRuka {
+query lumikenkaRuka {
     allMarkdownRemark(
         sort: {order: ASC, fields: frontmatter___update}
-        filter: {frontmatter: {kauppa: {eq: "ye"}, ruka: {eq: "ye"}}}
+        filter: {frontmatter: {lumikengat: {eq: "ye"}, ruka: {eq: "ye"}}}
       ) {
         nodes {
           frontmatter {
@@ -74,7 +76,7 @@ query kaupatRuka {
             slug
             title
             ruka
-            kauppa
+            lumikenkahinta
             update
             products
           }

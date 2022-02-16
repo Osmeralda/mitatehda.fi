@@ -14,7 +14,7 @@ syote: ei
 pyha: ei
 saariselka: ei
 xchinta: 28€
-hinta: 29€
+dhhinta: 29€
 slug: https://hillskirent.fi/ruka/vuokraamo/
 update: 2021-12-19-14:05
 products: Lasku-, maastohiihto välinevuokraus, Huolto, pyörävuokraus

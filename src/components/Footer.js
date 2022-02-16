@@ -20,7 +20,7 @@ export default function Footer() {
       <Container>
         <div className='footer'>
             <footer>
-               {/*<p>{copyright}</p> */}
+              <p>{copyright}</p>
             </footer>
         </div>
       </Container>

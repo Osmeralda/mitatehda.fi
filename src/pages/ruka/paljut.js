@@ -17,20 +17,20 @@ export default function LasketteluRuka({ data }) {
         <Layout>
     <Helmet>
         <title>MitäTehdä.fi Ruka</title>
-        <meta name="description" content="Kaikki Rukan maastohiihtovuokraamot kätevästi yhdellä sivulla!" />
+        <meta name="description" content="Kaikki Rukan paljut ja kylkyptyynyrit kätevästi yhdellä sivulla!" />
         <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, kaupat, vuokraamot, ravintolat, matkamuistomyymälät, laskettelu, hiihto, paljut, elämykset, elämys" />
         <meta property="og:title" content="MitäTehdä.fi" />
         <meta property="og:type" content="Kaikki pohjois-Suomen aktiviteetit listattuna" />
         <meta property='og:image' content='' />
         <meta property='og:locale' content='fi_FI' />
-        <meta property='og:url' content='www.mitatehda.fi/ruka/hiihto' />
-        <link rel="canonical" href="www.mitatehda.fi/ruka/hiihto" />
+        <meta property='og:url' content='www.mitatehda.fi/ruka/paljut' />
+        <link rel="canonical" href="www.mitatehda.fi/ruka/paljut" />
     </Helmet>
             <RukaSidebar />
 
                 <div className={styles.keskus}>
                     <Container>
-                    <h1>Rukan kaupat ja matkamuistomyymälät</h1>
+                    <h1>Rukan kylpytynnyrit vuokralle</h1>
                     </Container>
                 </div>
                 
@@ -39,7 +39,7 @@ export default function LasketteluRuka({ data }) {
                         <Link to={teksti.frontmatter.slug} key={teksti.id} className={styles.yrityslinkki}>
                             <div>
                                 <h3>{ teksti.frontmatter.title }</h3>
-                                <p>1pv vuokra: { teksti.frontmatter.hinta }</p>
+                                <p>1pv vuokra: { teksti.frontmatter.paljuhinta }</p>
                                 <p>Tuotteet: { teksti.frontmatter.products }</p>
                             </div>
                         </Link>
@@ -71,13 +71,13 @@ query paljutRuka {
       ) {
         nodes {
           frontmatter {
-            hinta
             slug
             title
             ruka
             palju
             update
             products
+            paljuhinta
           }
         }
       }

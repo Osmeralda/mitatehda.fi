@@ -25,11 +25,11 @@ export default function Navbar() {
             
             <div className="links">
                 <Link to="/ruka" activeClassName={"active"}>Ruka</Link>
-                <Link to="/levi" activeClassName={"active"}>Levi</Link>
-                <Link to="/yllas" activeClassName={"active"}>Ylläs</Link>
-                <Link to="/syote" activeClassName={"active"}>Syöte</Link>
-                <Link to="/pyha" activeClassName={"active"}>Pyhä</Link>
-                <Link to="/saariselka" activeClassName={"active"}>Saariselkä</Link>
+                <Link to="/levi" activeClassName={"active"}></Link>
+                <Link to="/yllas" activeClassName={"active"}></Link>
+                <Link to="/syote" activeClassName={"active"}></Link>
+                <Link to="/pyha" activeClassName={"active"}></Link>
+                <Link to="/saariselka" activeClassName={"active"}></Link>
                 
                 <Link to="/yhteystiedot" activeClassName={"active"}>Yhteystiedot</Link>
             </div>           

@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import * as styles from '../styles/keskukset.module.css'
-import {Link} from "gatsby"
+
 
 import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
@@ -13,15 +13,15 @@ export default function Home() {
     <div>
     <Layout>
     <Helmet>
-        <title>MitäTehdä.fi Ruka</title>
-        <meta name="description" content="Kaikki Rukan ja lähialueiden vaellusreitit kätevästi yhdellä sivulla!" />
+        <title>MitäTehdä.fi</title>
+        <meta name="description" content="Kaikki Lapin ja Pohjois-Suomen tekemiset ja aktiviteetit kätevästi yhdellä sivulla!" />
         <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, pyhä, levi, kittilä, saariselkä, ivalo, ylläs, vaellusreitit, kävelyreitit, Valtavaara, pyhävaara, riisitunturi, posio, kaupat, vuokraamot, ravintolat, laskettelu, hiihto, paljut, elämykset, elämys" />
         <meta property="og:title" content="MitäTehdä.fi" />
         <meta property="og:type" content="Kaikki pohjois-Suomen aktiviteetit listattuna" />
         <meta property='og:image' content='' />
         <meta property='og:locale' content='fi_FI' />
-        <meta property='og:url' content='www.mitatehda.fi/ruka/vaellus' />
-        <link rel="canonical" href="www.mitatehda.fi/ruka/vaellus" />
+        <meta property='og:url' content='www.mitatehda.fi/' />
+        <link rel="canonical" href="www.mitatehda.fi/" />
     </Helmet>
       <div className={styles.keskus}>
         <Container>

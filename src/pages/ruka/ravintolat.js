@@ -17,14 +17,14 @@ export default function LasketteluRuka({ data }) {
         <Layout>
     <Helmet>
         <title>MitäTehdä.fi Ruka</title>
-        <meta name="description" content="Kaikki Rukan maastohiihtovuokraamot kätevästi yhdellä sivulla!" />
+        <meta name="description" content="Kaikki Rukan ravintolat kätevästi yhdellä sivulla!" />
         <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, vaellusreitit, kävelyreitit, kaupat, vuokraamot, ravintolat, laskettelu, hiihto, paljut, elämykset, elämys" />
         <meta property="og:title" content="MitäTehdä.fi" />
         <meta property="og:type" content="Kaikki pohjois-Suomen aktiviteetit listattuna" />
         <meta property='og:image' content='' />
         <meta property='og:locale' content='fi_FI' />
-        <meta property='og:url' content='www.mitatehda.fi/ruka/hiihto' />
-        <link rel="canonical" href="www.mitatehda.fi/ruka/hiihto" />
+        <meta property='og:url' content='www.mitatehda.fi/ruka/ravintolat' />
+        <link rel="canonical" href="www.mitatehda.fi/ruka/ravintolat" />
     </Helmet>
             <RukaSidebar />
 
@@ -39,7 +39,7 @@ export default function LasketteluRuka({ data }) {
                         <Link to={teksti.frontmatter.slug} key={teksti.id} className={styles.yrityslinkki}>
                             <div>
                                 <h3>{ teksti.frontmatter.title }</h3>
-                                <p>{ teksti.frontmatter.products }</p>
+                                <p>{ teksti.frontmatter.kuvaus }</p>
                             </div>
                         </Link>
                     ))}
@@ -74,6 +74,7 @@ query ravintolaRuka {
             slug
             title
             ruka
+            kuvaus
             ravintola
             update
             products

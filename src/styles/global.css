@@ -9,6 +9,10 @@
     font-family:'Montserrat';
     color: white;
 }
+.content {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
 html,body {
     min-height: 100vh;
 }
@@ -29,8 +33,7 @@ nav {
     display: inline-block;
     list-style-type: none;
     text-align: left;
-    margin: 10px;
-    
+    margin: 10px;    
 }
 nav .links {   
     display: inline-block;
@@ -53,22 +56,14 @@ nav a:hover {
 nav a.active {
     border-color: tomato;
 }
-
 footer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     text-align: center;
     color: rgb(182, 182, 182);
     margin: 40px auto;
-    position: sticky;
     background-color: transparent;
-}
-nav .sidebar {
-    position: absolute;
-    font-size: auto;
-    display: grid;
-    text-align: left;
-    margin-right: 0;
-    max-width: 2fr;
 }
 nav .header {
     font-size: 3em;
@@ -83,24 +78,21 @@ nav.adBanner {
     max-width: 2fr;
 }
 .drpdwn {
+    float: right;
     margin: 0;
-    background-color:rgba(0, 0, 0, 0.9);
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 70vh;
-    width: 100%;
-    overflow: hidden;
-
-    border-color: tomato;
-    color: tomato;
+    height: 100%;
+    width: 30vh;
+    border-left: 3px solid;
+    border-color: white;
     font-weight: 500;
-    position: absolute;
     top: 0;
     right: 0;
-    transition: transform 300ms;
 }
 .ul {
     list-style-type: none;    
@@ -108,4 +100,18 @@ nav.adBanner {
 .li {
     margin-top: 1rem;
 }
+@media (min-width: 640px){
+    
+    }
+    
+@media (min-width: 768px){
 
+    }
+    
+@media (min-width: 1024px){
+
+    }
+    
+    @media (min-width: 1200px){
+    
+    }

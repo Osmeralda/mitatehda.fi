@@ -33,7 +33,7 @@ export default function Kelkkailu({ data }) {
                     <h1>Rukan moottorikelkka vuokraamot</h1>
                     </Container>
                 </div>
-                
+                <Container>
                 <div className={styles.yritykset}>
                     {tekstit.map(teksti => (
                         <Link to={teksti.frontmatter.slug} key={teksti.id} className={styles.yrityslinkki}>
@@ -44,7 +44,8 @@ export default function Kelkkailu({ data }) {
                             </div>
                         </Link>
                     ))}
-                     </div>            
+                     </div>   
+                     </Container>         
         <div className={styles.ads}>
                     <Container>
                     <Card>

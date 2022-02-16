@@ -2,16 +2,18 @@
     size: auto;
     text-align: center;
     padding-top: 1rem;
+    align-items: center;
+    
 }
 .keskus > h1 {
     size: auto;
     font-size: auto;
-    margin-top: 80px;
+    
 }
 .keskus > h2 {
     size: auto;
     font-size: auto;
-    margin: 1em;
+    margin-top: 1em;
 }
 .keskus > h3 {
     size: auto;
@@ -22,7 +24,7 @@
 .yritykset {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 65%;
     display: grid;
     grid-template-columns: auto;
     
@@ -34,9 +36,7 @@
     
     display: grid;
     grid-template-columns: auto;
-    border: 3px solid transparent;
-   /* border-bottom: 3px solid transparent;*/
-    
+    border-bottom: 3px solid transparent;   
 }
 .yrityslinkki:hover{
     border-color: tomato;
@@ -58,7 +58,15 @@
     align-items: center;
 }
 .btn {
+    font-family:inherit;
+    font-weight: 600;
     padding: 0.1em;
-    background-color: tomato;
+    background: solid transparent;
+    color: white;
     border-radius: 3px;
+    border-bottom: solid tomato;
+}
+.btn:hover {
+    background: tomato;
+    
 }
