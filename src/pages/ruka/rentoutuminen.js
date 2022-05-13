@@ -1,20 +1,21 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
-import Layout from '../../components/Layout'
+
 import * as styles from '../../styles/keskukset.module.css'
-import {Card, CardBody, CardTitle} from 'reactstrap'
+
 import { Helmet } from 'react-helmet'
 import { Container } from 'react-bootstrap'
-import GoogleAd from '../../components/Banner'
+
 import RukaSidebar from '../../components/RukaSidebar'
 
 
 export default function LasketteluRuka({ data }) {
     console.log(data)
-    const tekstit = data.allMarkdownRemark.nodes
+    const hyvinvointi = data.hyvinvointi.nodes
+    const avanto = data.avanto.nodes
 
     return (
-        <Layout>
+        <div>
     <Helmet>
         <title>MitäTehdä.fi Ruka</title>
         <meta name="description" content="Kaikki Rukan ravintolat kätevästi yhdellä sivulla!" />
@@ -30,33 +31,41 @@ export default function LasketteluRuka({ data }) {
 
                 <div className={styles.keskus}>
                     <Container>
-                    <h1>Rukan rentoutumis ja kauneusyritykset</h1>
+                    <h1>Rukan hyvinvointi ja kauneusyritykset</h1>
                     </Container>
                 </div>
                 
                 <div className={styles.yritykset}>
-                    {tekstit.map(teksti => (
-                        <Link to={teksti.frontmatter.slug} key={teksti.id} className={styles.yrityslinkki}>
+                    {hyvinvointi.map(teksti => (
+                        <Link to={teksti.frontmatter.slug} key={teksti.id} target="_blank" className={styles.yrityslinkki}>
                             <div>
                                 <h3>{ teksti.frontmatter.title }</h3>
                                 <p>{ teksti.frontmatter.products }</p>
                             </div>
                         </Link>
                     ))}
-                     </div>            
-        <div className={styles.ads}>
+                     </div>     
+
+                <div className={styles.keskus}>
                     <Container>
-                    <Card>
-                        <CardBody>
-                        <CardTitle>
-                                Advertisement
-                                </CardTitle>
-                <GoogleAd client="ca-pub-4371075580898574" />
-                        </CardBody>
-                </Card>
-                </Container>
-                </div>
-        </Layout>
+                        <h3>Avanto</h3>
+                        <p>Rukan alueen mahtavat avannot.</p>
+                        <p>Pulahda virkistävään avantoon jonka jälkeen pääset lämpimään saunaan!</p>
+                        </Container>
+                        </div>     
+
+                    <div className={styles.yritykset}>
+                    {avanto.map(teksti => (
+                        <Link to={teksti.frontmatter.slug} key={teksti.id} target="_blank" className={styles.yrityslinkki}>
+                            <div>
+                                <h3>{ teksti.frontmatter.title }</h3>
+                                <p>{ teksti.frontmatter.products }</p>
+                            </div>
+                        </Link> 
+                        ))}
+                        </div>  
+
+                        </div>   
     )
 }
 
@@ -64,7 +73,7 @@ export default function LasketteluRuka({ data }) {
 
 export const query = graphql`
 query rentoutuminenRuka {
-    allMarkdownRemark(
+    hyvinvointi: allMarkdownRemark(
         sort: {order: ASC, fields: frontmatter___update}
         filter: {frontmatter: {rentoutuminen: {eq: "ye"}, ruka: {eq: "ye"}}}
       ) {
@@ -77,6 +86,20 @@ query rentoutuminenRuka {
             rentoutuminen
             update
             products
+          }
+        }
+      }
+      avanto: allMarkdownRemark(
+        sort: {order: ASC, fields: frontmatter___update}
+        filter: {frontmatter: {avanto: {eq: "ye"}, ruka: {eq: "ye"}}}
+      ) {
+        nodes {
+          frontmatter {
+            slug
+            title
+            ruka
+            update
+            avanto
           }
         }
       }

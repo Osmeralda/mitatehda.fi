@@ -2,17 +2,15 @@ import React from 'react'
 import * as styles from '../styles/global.css'
 import { Link } from 'gatsby'
 import { Container, Col, Navbar, Nav } from 'react-bootstrap'
-import NavbarToggle from 'react-bootstrap/esm/NavbarToggle'
-import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse'
 
 
+const RukaSidebar = ({title}) => {
 
+  return (
+    <div>
+    <Container>
+      <Col>
 
-
-const RukaSidebar = () => (
-  
-      <Container>
-        <Col>
         <Navbar className='drpdwn'>
 
             <Nav>
@@ -42,16 +40,24 @@ const RukaSidebar = () => (
           <Link to="/ruka/paljut">Kylpytynnyrit</Link>
           </li>
           <li className='li'>
+          <Link to="/ruka/aktiviteetit">Muut Aktiviteetit</Link>
+          </li>
+          <li className='li'>
           <Link to="/ruka/elamykset">Elämykset</Link>
           </li>
           <li className='li'>
-          <Link to="/ruka/rentoutuminen">Rentoutuminen</Link>
+          <Link to="/ruka/rentoutuminen">Hyvinvointi</Link>
+          </li>
+          <li className='li'>
+          <Link to="/ruka/palvelut">Muut Palvelut</Link>
           </li>
           </ul>
           </Nav>
         </Navbar>
         </Col>
-        </Container>
+    </Container>
+    </div>
 )
+}
 
-export default RukaSidebar
+ export default RukaSidebar

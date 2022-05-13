@@ -9,7 +9,7 @@ import { Container } from 'react-bootstrap'
 import RukaSidebar from '../../components/RukaSidebar'
 
 
-export default function LasketteluRuka({ data }) {
+export default function aktiviteetitRuka({ data }) {
     console.log(data)
     const tekstit = data.allMarkdownRemark.nodes
 
@@ -17,20 +17,20 @@ export default function LasketteluRuka({ data }) {
         <div>
     <Helmet>
         <title>MitäTehdä.fi Ruka</title>
-        <meta name="description" content="Kaikki Rukan paljut ja kylkyptyynyrit kätevästi yhdellä sivulla!" />
-        <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, kaupat, vuokraamot, ravintolat, matkamuistomyymälät, laskettelu, hiihto, paljut, elämykset, elämys" />
+        <meta name="description" content="Kaikki Rukan aktiviteetit kätevästi yhdellä sivulla!" />
+        <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, vaellusreitit, kävelyreitit, kaupat, vuokraamot, ravintolat, laskettelu, hiihto, paljut, elämykset, elämys" />
         <meta property="og:title" content="MitäTehdä.fi" />
         <meta property="og:type" content="Kaikki pohjois-Suomen aktiviteetit listattuna" />
         <meta property='og:image' content='' />
         <meta property='og:locale' content='fi_FI' />
-        <meta property='og:url' content='www.mitatehda.fi/ruka/paljut' />
-        <link rel="canonical" href="www.mitatehda.fi/ruka/paljut" />
+        <meta property='og:url' content='www.mitatehda.fi/ruka/palvelut' />
+        <link rel="canonical" href="www.mitatehda.fi/ruka/palvelut" />
     </Helmet>
             <RukaSidebar />
 
                 <div className={styles.keskus}>
                     <Container>
-                    <h1>Rukan kylpytynnyrit vuokralle</h1>
+                    <h1>Muunlaisia Palveluita Rukalla</h1>
                     </Container>
                 </div>
                 
@@ -39,34 +39,35 @@ export default function LasketteluRuka({ data }) {
                         <Link to={teksti.frontmatter.slug} key={teksti.id} target="_blank" className={styles.yrityslinkki}>
                             <div>
                                 <h3>{ teksti.frontmatter.title }</h3>
-                                <p>1pv vuokra: { teksti.frontmatter.paljuhinta }</p>
-                                <p>Tuotteet: { teksti.frontmatter.products }</p>
+                                
+                                <p>{ teksti.frontmatter.products }</p>
                             </div>
                         </Link>
                     ))}
-                     </div>            
+                    </div>
 
-                     </div>   
+
+
+                    </div>   
     )
 }
 
 // export page query
 
 export const query = graphql`
-query paljutRuka {
+query palvelutRuka {
     allMarkdownRemark(
         sort: {order: ASC, fields: frontmatter___update}
-        filter: {frontmatter: {palju: {eq: "ye"}, ruka: {eq: "ye"}}}
+        filter: {frontmatter: {palvelu: {eq: "ye"}, ruka: {eq: "ye"}}}
       ) {
         nodes {
           frontmatter {
             slug
             title
+            palvelu
             ruka
-            palju
             update
             products
-            paljuhinta
           }
         }
       }

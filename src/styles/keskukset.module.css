@@ -1,72 +1,107 @@
-.keskus {    
-    size: auto;
-    text-align: center;
-    padding-top: 1rem;
-    align-items: center;
+.keskus {
+    margin-left: 6rem;
     
 }
 .keskus > h1 {
-    size: auto;
-    font-size: auto;
-    
+    text-align: left;
+    margin-top: 1.5em;
+    font-size: 7em;
+    font-weight: 900;
 }
 .keskus > h2 {
-    size: auto;
-    font-size: auto;
-    margin-top: 1em;
+    margin-top: 2em;
+    font-size: 8em;
+    font-weight: 900;
 }
 .keskus > h3 {
     size: auto;
     font-size: auto;
-    font-weight: 400;
     margin: 1em;
 }
 .yritykset {
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
+    max-width: 65%;
+    margin-top: 2rem;
     display: grid;
-    grid-template-columns: auto;
-    
-}
-.yrityslinkki {
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    
-    display: grid;
-    grid-template-columns: auto;
-    border-bottom: 3px solid transparent;   
-}
-.yrityslinkki:hover{
-    border-color: tomato;
+    grid-template-columns: auto auto auto;  
 }
 .yritykset h3 {
     text-align: center;
     margin: 20px auto 0px;
     font-weight: 500;
+    color: whitesmoke;   
 }
 .yritykset p {
     text-align: center;
     color: whitesmoke;
     margin-top: 4px;
 }
-.ads {
-    padding: auto;
-    margin-top: 1em;
-    text-align: center;
-    align-items: center;
+.featured {
+    position: relative;
+    margin-left: auto;
+    margin-right: 3em;
+    max-width: 100%;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 10% auto auto auto auto;
+    column-gap: 50px;
+    justify-content: center;
+}
+.featured h3 {
+    padding-left: 5%;
+    text-align: left;
+    margin: 20px auto 0px;
+    font-weight: 500;
+    color: whitesmoke;   
+}
+.featured p {
+    padding-left: 5%;
+    text-align: left;
+    color: whitesmoke;
+    margin-top: 4px;
+}
+.featuredTitle h3 {
+    transform: rotate(-90deg);
+    background-color: transparent;
+    color: black;
+    font-size: 5em;
+    font-weight: 999;
+    margin-top: 3.5em;
+    margin-right: auto;
+    margin-left: 2em;
+}
+.yrityslinkki {
+    max-width: 300px;
+    display: grid;
+    padding-bottom: 2rem;
+    grid-template-columns: auto; 
+    background: rgba(1, 1, 1, 0.9);
+    box-shadow: 0 5px 5px  0 rgb(87, 87, 87);
+}
+.yrityslinkki h3 {
+    font-size: 2em;
+    font-weight: bold;
 }
 .btn {
     font-family:inherit;
+    font-size: 2em;
     font-weight: 600;
-    padding: 0.1em;
-    background: solid transparent;
-    color: white;
-    border-radius: 3px;
-    border-bottom: solid tomato;
+    background: transparent;
+    color: tomato;
+    border: solid 4px tomato;
+    padding: 0.5em;
 }
 .btn:hover {
     background: tomato;
-    
+    color: #fff;  
+}
+.thumbnail {
+    width: 300px;
+}
+.imageFrontPage {
+    max-width: 35%;
+    max-height: 97vh;
+    object-fit: cover;
+    object-position: bottom right;
 }

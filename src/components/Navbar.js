@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import * as styles from '../styles/global.css'
-import { Container } from 'reactstrap'
+import { StaticImage } from 'gatsby-plugin-image'
 
 export default function Navbar() {
     const data = useStaticQuery(graphql`
@@ -19,21 +19,21 @@ export default function Navbar() {
 
     
     return (
-        <Container>
-        <nav>
-            <Link to="/" className='header'>{title}</Link>
+
+        <nav className='nav'>
+          <div>
+            <ul className='header'>
+
+            <li><Link to="/" className='title'>{title}</Link></li>
+            <li><Link to="/ruka" className='li' activeClassName={"active"}>Ruka</Link></li>
+            <li><Link to="/yhteystiedot" className='li' activeClassName={"active"}>Yhteystiedot</Link></li>
+            </ul>
+            </div>
+            <div>
+            <a href="https://www.facebook.com/Mit%C3%A4Tehd%C3%A4fi-104893475469082" className='fbicon' target="_blank"><StaticImage src="../images/icons8-facebook.svg" />  </a>
+            </div>
             
-            <div className="links">
-                <Link to="/ruka" activeClassName={"active"}>Ruka</Link>
-                <Link to="/levi" activeClassName={"active"}></Link>
-                <Link to="/yllas" activeClassName={"active"}></Link>
-                <Link to="/syote" activeClassName={"active"}></Link>
-                <Link to="/pyha" activeClassName={"active"}></Link>
-                <Link to="/saariselka" activeClassName={"active"}></Link>
-                
-                <Link to="/yhteystiedot" activeClassName={"active"}>Yhteystiedot</Link>
-            </div>           
-        </nav> 
-        </Container>     
+        </nav>  
+        
     )
     }

@@ -1,17 +1,33 @@
 import React from "react"
-import Layout from "../components/Layout"
 import * as styles from '../styles/keskukset.module.css'
-
-
+import { graphql, Link } from "gatsby"
 import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import Navbar from "../components/Navbar"
+import { Button } from "react-bootstrap"
+import Footer from "../components/Footer"
+import Info from "../components/Info"
 
 
-export default function Home() {
+
+export default function Home({data}) {
+
+  const tekstit = data.allMarkdownRemark.nodes
+  const image = getImage(data.allMarkdownRemark.file)
 
   return (
-    <div>
-    <Layout>
+    <Container>
+      <div className="flexRow margingbottom bg">
+        <div className="flexColumn">
+    <Navbar />
+    <div className={styles.keskus}>
+          <h1>
+          Löydä kaikki aktiviteetit Rukalta!
+          </h1>
+          <Button to="/ruka" className={styles.btn}>Aktiviteetteihin</Button>
+      </div>
+      </div>
     <Helmet>
         <title>MitäTehdä.fi</title>
         <meta name="description" content="Kaikki Lapin ja Pohjois-Suomen tekemiset ja aktiviteetit kätevästi yhdellä sivulla!" />
@@ -23,17 +39,90 @@ export default function Home() {
         <meta property='og:url' content='www.mitatehda.fi/' />
         <link rel="canonical" href="www.mitatehda.fi/" />
     </Helmet>
-      <div className={styles.keskus}>
-        <Container>
-          <h1 className={styles.keskus}>
-          Tervetuloa MitäTehdä.fi sivustolle!
-          </h1>
-          <h2 className={styles.keskus}>Olemme päättäneet kerätä kaikki Aktiviteetit, reitit sekä vuokraajat koko pohjois-Suomesta sivustollemme</h2>
-          <h2 className={styles.keskus}>Aloita valitsemalla ylhäältä paikka mistä haluat löytää tietoa</h2>          
-          <h2 className={styles.keskus}>Huomaathan että sivustomme on vielä kehitys vaiheessa. Jos huomaat että jokin paikka, yritys tai aktiviteetti puuttuu olethan meihin rohkeasti yhteydessä</h2>
-        </Container>
-      </div>
-    </Layout>
+      <div className={styles.imageFrontPage}>
+        <StaticImage src="../images/kelkka-rukalla.jpg"
+         alt="A snowmobile in Ruka"
+         width={1500}
+         height={2048}
+         placeholder="blurred" 
+         cropFocus="SOUTHEAST"
+         />
+           </div>
     </div>
+      
+      <div>
+        <div className="flexColumn">
+    <div className={styles.featured}>
+      <div className={styles.featuredTitle}>
+        <h3>Valitut</h3>
+        </div>
+        {tekstit.map(teksti => (
+            <div className={styles.yrityslinkki}>
+                <div className="space-between">
+                  <div>
+                    <GatsbyImage className="thumbnail" image={getImage(teksti.frontmatter.image01)} />
+                    <h3>{ teksti.frontmatter.title }</h3>
+                    <p>Tuotteet: { teksti.frontmatter.products }</p>
+                    </div>
+                    <div className={styles.button}>
+                    <a href={teksti.frontmatter.slug} target="_blank" className="button">Vieraile </a>
+                    </div>
+                </div>
+            </div>
+        ))}
+         </div>
+         <Link to="/ruka" className="seeMore">Katso lisää +</Link>  
+         </div>
+         </div>
+         <div>
+         <Info />
+         </div>
+         <div>
+         <Footer />
+         </div>
+         </Container>
   )
 }
+// export page query
+
+export const query = graphql`
+query featuredRuka {
+  allMarkdownRemark(
+    sort: {order: ASC, fields: frontmatter___update}
+    filter: {frontmatter: {featured: {eq: "ye"}, ruka: {eq: "ye"}}}
+  ) {
+    nodes {
+      frontmatter {
+        slug
+        title
+        ruka
+        update
+        featured
+        products
+        image01 {
+          childImageSharp {
+            gatsbyImageData(
+              width: 400
+              height: 200
+              blurredOptions: {width: 200}
+              transformOptions: {cropFocus: CENTER}
+              placeholder: BLURRED
+            )
+          }
+        }
+      }
+    }
+  }
+  file(relativePath: {eq: "kelkka-rukalla.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(
+        placeholder: BLURRED
+        layout: FULL_WIDTH
+        formats: [AUTO, WEBP, AVIF]
+        transformOptions: {cropFocus: SOUTHEAST}
+      )
+    }
+  }
+}
+
+`

@@ -1,11 +1,11 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
-import Layout from '../../components/Layout'
+
 import * as styles from '../../styles/keskukset.module.css'
-import {Card, CardBody, CardTitle} from 'reactstrap'
+
 import { Helmet } from 'react-helmet'
 import { Container } from 'react-bootstrap'
-import GoogleAd from '../../components/Banner'
+
 import RukaSidebar from '../../components/RukaSidebar'
 
 
@@ -14,7 +14,7 @@ export default function LasketteluRuka({ data }) {
     const tekstit = data.allMarkdownRemark.nodes
 
     return (
-        <Layout>
+        <div>
     <Helmet>
         <title>MitäTehdä.fi Ruka</title>
         <meta name="description" content="Jokainen Rukan lasketteluvuokraamot kätevästi yhdellä sivulla!" />
@@ -36,7 +36,7 @@ export default function LasketteluRuka({ data }) {
                 
                 <div className={styles.yritykset}>
                     {tekstit.map(teksti => (
-                        <Link to={teksti.frontmatter.slug} key={teksti.id} className={styles.yrityslinkki}>
+                        <Link to={teksti.frontmatter.slug} key={teksti.id} target="_blank" className={styles.yrityslinkki}>
                             <div>
                                 <h3>{ teksti.frontmatter.title }</h3>
                                 <p>3h välinesetti: { teksti.frontmatter.dhhinta }</p>
@@ -45,25 +45,14 @@ export default function LasketteluRuka({ data }) {
                         </Link>
                     ))}
                      </div>            
-        <div className={styles.ads}>
-                    <Container>
-                    <Card>
-                        <CardBody>
-                        <CardTitle>
-                                Advertisement
-                                </CardTitle>
-                <GoogleAd client="ca-pub-4371075580898574" />
-                        </CardBody>
-                </Card>
-                </Container>
-                </div>
+
             <div className={styles.keskus}>
                 <h2>Rukan rinnekartta</h2>
-                <Link to="https://www.ruka.fi/fi/hiihtokeskus/rinteet" className={styles.btn}>Klikkaa tästä rinnekarttaan</Link>
+                <Link to="https://www.ruka.fi/fi/hiihtokeskus/rinteet" target="_blank" className={styles.btn}>Klikkaa tästä rinnekarttaan</Link>
                 <h2>Osta hissiliput Rukan sivuilta</h2>
-                <Link to="https://www.ruka.fi/fi/hiihtokeskus/lippukauppa/hissiliput" className={styles.btn}>Painamalla tästä</Link>
+                <Link to="https://www.ruka.fi/fi/hiihtokeskus/hissiliput" target="_blank" className={styles.btn}>Painamalla tästä</Link>
             </div>
-        </Layout>
+            </div>   
     )
 }
 

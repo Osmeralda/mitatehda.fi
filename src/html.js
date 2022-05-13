@@ -12,6 +12,22 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
+
+        <script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-SCCB7814Q9"
+/>
+<script
+  dangerouslySetInnerHTML={{
+    __html: `
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SCCB7814Q9');
+  `,
+  }}
+/>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -27,6 +43,7 @@ export default function HTML(props) {
     </html>
   )
 }
+
 
 HTML.propTypes = {
   htmlAttributes: PropTypes.object,

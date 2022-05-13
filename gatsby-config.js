@@ -10,6 +10,15 @@ module.exports = {
   plugins: [ 
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-4371075580898574`
+      },
+    },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -19,13 +28,18 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `yritykset`,
         path: `${__dirname}/src/tekstit`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
   ],
@@ -36,37 +50,4 @@ module.exports = {
     id: '00212',
     slug: 'metadata'
   }
-}
-
-const path = require(`path`)
-const { slash } = require(`gatsby-core-utils`)
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  // query content for WordPress posts
-  const result = await graphql(`
-    query WordPress{
-      siteMetadata {
-        edges {
-          node {
-            id
-            slug
-          }
-        }
-      }
-    }
-  `)
-  const postTemplate = path.resolve(`./src/templates/post.js`)
-  result.data.siteMetadata.edges.forEach(edge => {
-    createPage({
-      // will be the url for the page
-      path: edge.node.slug,
-      // specify the component template of your choice
-      component: slash(postTemplate),
-      // In the ^template's GraphQL query, 'id' will be available
-      // as a GraphQL variable to query for this posts's data.
-      context: {
-        id: edge.node.id,
-      },
-    })
-  })
 }
