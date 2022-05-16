@@ -25,7 +25,7 @@ export default function Home({data}) {
           <h1>
           Löydä kaikki aktiviteetit Rukalta!
           </h1>
-          <Button to="/ruka" className={styles.btn}>Aktiviteetteihin</Button>
+          <Button to="/ruka" className={styles.btnFrontPage}>Aktiviteetteihin</Button>
       </div>
       </div>
     <Helmet>
@@ -42,8 +42,6 @@ export default function Home({data}) {
       <div className={styles.imageFrontPage}>
         <StaticImage src="../images/kelkka-rukalla.jpg"
          alt="A snowmobile in Ruka"
-         width={1500}
-         height={2048}
          placeholder="blurred" 
          cropFocus="SOUTHEAST"
          />

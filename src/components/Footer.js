@@ -29,7 +29,7 @@ export default function Footer() {
               <Link to="/yhteystiedot" className='footerLink'>Yhteystiedot</Link><br></br>
               <a href="https://www.facebook.com/Mit%C3%A4Tehd%C3%A4fi-104893475469082" target="_blank"><StaticImage src="../images/icons8-facebook.svg" /></a>
               </div>
-              <div>
+              <div className='footerCopyRight'>
               <p>{copyright}</p>
               </div>
             </footer>

@@ -1,16 +1,22 @@
 .keskus {
-    margin-left: 6rem;
-    
+    margin-left: 6vw; 
 }
 .keskus > h1 {
     text-align: left;
-    margin-top: 1.5em;
-    font-size: 7em;
+    font-size: 7vw;
     font-weight: 900;
+    margin-top: 25%;
+}
+@media (max-width:700px) {
+    .keskus h1 {
+        margin-top: 2vw;
+        margin-inline: 1vw;
+        text-align: center;
+    }
 }
 .keskus > h2 {
-    margin-top: 2em;
-    font-size: 8em;
+    margin-top: 2vh;
+    font-size: 6vw;
     font-weight: 900;
 }
 .keskus > h3 {
@@ -40,15 +46,22 @@
 .featured {
     position: relative;
     margin-left: auto;
-    margin-right: 3em;
+    margin-right: auto;
     max-width: 100%;
-    margin-top: 1rem;
     display: grid;
-    grid-template-columns: 10% auto auto auto auto;
-    column-gap: 50px;
-    justify-content: center;
+    grid-template-columns: 10% 15% 15% 15% 15%;
+    column-gap: 3vw;
+    align-items: center;
+}
+@media (max-width: 750px) {
+    .featured {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    row-gap: 5vw;
+    }
 }
 .featured h3 {
+    font-size: auto;
     padding-left: 5%;
     text-align: left;
     margin: 20px auto 0px;
@@ -62,46 +75,64 @@
     margin-top: 4px;
 }
 .featuredTitle h3 {
+    transform-origin: center;
     transform: rotate(-90deg);
     background-color: transparent;
     color: black;
-    font-size: 5em;
+    font-size: 5vw;
     font-weight: 999;
-    margin-top: 3.5em;
-    margin-right: auto;
-    margin-left: 2em;
+    margin-top: 100%;
+}
+@media (max-width: 750px) {
+    .featuredTitle h3 {
+    transform: none;
+    margin-top: auto;
+    text-align: center;
+    }
 }
 .yrityslinkki {
-    max-width: 300px;
+    max-width: auto;
     display: grid;
-    padding-bottom: 2rem;
+    height: 100%;
+    padding-bottom: 2vw;
     grid-template-columns: auto; 
     background: rgba(1, 1, 1, 0.9);
     box-shadow: 0 5px 5px  0 rgb(87, 87, 87);
+    word-break: break-word;
 }
 .yrityslinkki h3 {
-    font-size: 2em;
+    font-size: 2vw;
     font-weight: bold;
 }
-.btn {
+.yrityslinkki p {
+    font-size: 1vw;
+    font-weight: 200;
+}
+.btnFrontPage {
     font-family:inherit;
-    font-size: 2em;
+    font-size: 2vw;
     font-weight: 600;
     background: transparent;
     color: tomato;
     border: solid 4px tomato;
-    padding: 0.5em;
+    padding: 0.5vw;
+    margin-bottom: 1vw;
 }
-.btn:hover {
+.btnFrontPage:hover {
     background: tomato;
     color: #fff;  
 }
 .thumbnail {
-    width: 300px;
+    width: 100%;
 }
 .imageFrontPage {
     max-width: 35%;
-    max-height: 97vh;
+    max-height: 90%;
     object-fit: cover;
     object-position: bottom right;
+}
+@media (max-width: 750px) {
+    .imageFrontPage {
+        min-width: 100%;
+    }
 }
