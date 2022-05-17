@@ -42,9 +42,11 @@ export default function Home({data}) {
       <div className={styles.imageFrontPage}>
         <StaticImage src="../images/kelkka-rukalla.jpg"
          alt="A snowmobile in Ruka"
-         placeholder="blurred" 
+         placeholder="blurred"
+         objectFit="cover"
+         objectPosition="bottom"
          cropFocus="SOUTHEAST"
-         />
+           />
            </div>
     </div>
       

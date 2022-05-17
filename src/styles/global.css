@@ -179,6 +179,6 @@ nav a.active {
     flex-direction: row;
     color: tomato;
     justify-content: end;
-    margin-right: 20%;
-    margin-top: 1em;
+    margin-right: 18%;
+    margin-top: 1.5vw;
 }
