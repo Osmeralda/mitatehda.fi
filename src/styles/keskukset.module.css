@@ -7,7 +7,7 @@
     font-weight: 900;
     margin-top: 25%;
 }
-@media (max-width:700px) {
+@media (max-width:700) {
     .keskus h1 {
         margin-top: 2vw;
         margin-inline: 1vw;
@@ -31,7 +31,7 @@
     max-width: 65%;
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: auto auto auto;  
+    grid-template-columns: auto auto auto; 
 }
 .yritykset h3 {
     text-align: center;
@@ -50,15 +50,17 @@
     margin-right: auto;
     max-width: 100%;
     display: grid;
-    grid-template-columns: 10% 15% 15% 15% 15%;
+    grid-template-columns: 5% 20% 20% 20% 20%;
     column-gap: 3vw;
     align-items: center;
 }
-@media (max-width: 750px) {
+@media (max-width: 700px) {
     .featured {
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto;
     row-gap: 5vw;
+    margin-left: auto;
+    margin-right: auto;
     }
 }
 .featured h3 {
@@ -84,7 +86,7 @@
     font-weight: 999;
     margin-top: 100%;
 }
-@media (max-width: 750px) {
+@media (max-width: 700px) {
     .featuredTitle h3 {
     font-size: 7vw;
     transform: none;
@@ -103,12 +105,32 @@
     word-break: break-word;
 }
 .yrityslinkki h3 {
-    font-size: 2vw;
+    font-size: 3vw;
     font-weight: bold;
 }
 .yrityslinkki p {
-    font-size: 1vw;
+    font-size: 2vw;
     font-weight: 200;
+}
+@media (max-width: 700px ) {
+    .yrityslinkki {
+        display: grid;
+        height: 100%;
+        padding-bottom: 2vw;
+        grid-template-columns: auto; 
+        background: rgba(1, 1, 1, 0.9);
+        box-shadow: 0 5px 5px  0 rgb(87, 87, 87);
+        word-break: break-word;
+    }
+    .yrityslinkki p {
+        font-size: 3vw;
+        font-weight: 200;
+        word-break: break-word;
+    }
+    .yrityslinkki h3 {
+        font-size: 4vw;
+        font-weight: bold;
+    }
 }
 .btnFrontPage {
     font-family:inherit;
@@ -139,9 +161,9 @@
     object-fit: cover;
     object-position: bottom right;
 }
-@media (max-width: 750px) {
+@media (max-width: 700px) {
     .imageFrontPage {
         min-width: 100%;
-        height: 100px;
+        max-height: 100px;
     }
 }

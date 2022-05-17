@@ -102,8 +102,8 @@ query featuredRuka {
         image01 {
           childImageSharp {
             gatsbyImageData(
-              width: 400
-              height: 200
+              width: 700
+              height: 400
               blurredOptions: {width: 200}
               transformOptions: {cropFocus: CENTER}
               placeholder: BLURRED
