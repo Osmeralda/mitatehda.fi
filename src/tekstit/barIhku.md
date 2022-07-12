@@ -5,4 +5,5 @@ ruka: ye
 slug: https://barihku.fi/ruka
 kuvaus: Paras karaoke ja after ski koko tunturissa!
 update: 2022-02-09-14:23
+image01: ../images/ihkuRuka.jpg
 ---

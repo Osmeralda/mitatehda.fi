@@ -19,5 +19,6 @@ hinta:
 lumikenkahinta: 
 elamys: ye
 update: 2022-02-01-13:08
-products: Huskysafari, Opastettu Kennelvierailu, matkamuistomyymälä, kotieläinpiha, Kesällä Husky kärryajelu, husky vaellukset, 
+products: Huskysafari, Opastettu Kennelvierailu, matkamuistomyymälä, kotieläinpiha, Kesällä Husky kärryajelu, husky vaellukset
+image01: ../images/erasusi.jpg
 ---

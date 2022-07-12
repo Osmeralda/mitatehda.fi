@@ -5,4 +5,5 @@ ruka: ye
 slug: https://www.facebook.com/skibooster
 kuvaus: Gondolin alla Vuosselissa
 update: 2022-02-11-12:01
+image01: ../images/skiBooster.jpg
 ---

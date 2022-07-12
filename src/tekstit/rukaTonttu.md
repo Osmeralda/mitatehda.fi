@@ -6,4 +6,5 @@ slug: https://www.rukatonttu.fi/
 kuvaus: Tule Rukatonttuun kokemaan TALVEN PARHAAT HETKET
 update: 2022-02-11-11:47
 avanto: ye
+image01: ../images/rukantonttu_takka_2.webp
 ---

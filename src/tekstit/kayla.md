@@ -6,3 +6,5 @@ elamys: ye
 aktiviteetti: ye
 update: 2022-03-26-11:06
 products: Käylä on vireä Pohjois-Kuusamon alueen kyläkeskus. Pilkkimistä, Lumikenkäilyä, husky-safareita, maastohiihtoa, hiihtovaelluksia, talutus- sekä maastoratsastusta, rekiajeluita, kotieläinpiha, kanootit, koskenlasku, melonta...
+image01: ../images/Kaylankoski.jpg
+---

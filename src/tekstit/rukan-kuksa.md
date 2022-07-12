@@ -5,4 +5,5 @@ ruka: ye
 slug: https://www.rukankuksa.fi/
 kuvaus: KORKEATASOINEN RAVINTOLA RUKAN KUKSA TARJOAA PAIKALLISESTI TUOTETTUA VILLIRUOKAA RUKAN KYLÄSSÄ, KUUSAMOSSA.
 update: 2022-02-11-11:45
+image01: ../images/rukanKuksa.webp
 ---

@@ -5,4 +5,5 @@ aktiviteetti: ye
 slug: https://rukankeilahalli.fi/
 update: 2022-03-26-09:38
 products: Kahdeksanraitainen keilahallimme tarjoaa upeat puitteet niin aloittelijoille kuin vaativammillekin harrastajille!
+image01: ../images/keilaus2-1.jpg
 ---

@@ -17,4 +17,5 @@ slug: http://www.northernlightsafaries.fi/
 hinta: 65€
 update: 2022-01-02-14:52
 products: Vuokraus, Moottorikelkka- husky- poro- safarit, Paanajärven eräkeskus, minikelkat, yritysohjelmat
+image01: ../images/northernlightsafari.jpg
 ---

@@ -13,8 +13,9 @@ yllas: ei
 syote: ei
 pyha: ei
 saariselka: ei
-slug: https://rhh.fi/fi/vuokrakelkat-ruka-kuusamolla/
+slug: https://rhh.fi/fi/vuokrakelkat-ruka-kuusamossa/
 hinta: 85€
 update: 2022-01-02-14:48
 products: Moottorikelkka vuokraus, Mökit, Rakennuspalvelut
+image01: ../images/rukanhuvila_huolto.jpg
 ---

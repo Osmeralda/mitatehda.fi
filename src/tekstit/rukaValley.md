@@ -20,4 +20,5 @@ lumikenkahinta: 18€
 dhhinta: 30.5€
 update: 2022-02-01-13:08
 products: Laskettelusetit, vuokravaatteet, stigat, pulkat ja valjaat, lumikengät, ahkio, OAC skinbased sukset, lumisurffi
+image01: ../images/ruka_logo.jpg
 ---

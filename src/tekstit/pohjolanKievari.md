@@ -7,4 +7,5 @@ slug: https://www.pohjolanpirtti.fi/
 kuvaus: Pohjolassa me tarjoamme aina maistuvat herkut parhaista paikallisista raaka-aineista valmistettuna
 products: Sauna elämyksiä, Päivä paikallisena, arktinen puutarhajuhla
 update: 2022-02-11-11:31
+image01: ../images/pohjolanPirtti.webp
 ---

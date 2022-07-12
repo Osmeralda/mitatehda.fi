@@ -22,4 +22,5 @@ hinta: 75€
 paljuhinta: 120€
 update: 2022-02-01-13:08
 products: Vuokraus, Safari, Jäärata, laskettelu, maastohiihto, lumikengät, ahkiot, lapsenkantorinkka, palju, Rossignol test center, pyöravuokraamo
+image01: ../images/sporthouseRuka.jpg
 ---

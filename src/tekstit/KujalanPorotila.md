@@ -14,4 +14,5 @@ elamys: ye
 kauppa: ye
 update: 2022-02-01-13:08
 products: Monipuolisesti porotilan elämää, Safareita, Porojoogaa, Rekiajelut, Revontulia, Kotaillallinen, Porotaksi, Palju, Tilamyymälä, Majoitus
+image01: ../images/kujalan_porotila.webp
 ---

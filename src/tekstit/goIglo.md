@@ -19,4 +19,5 @@ hinta: 100€
 lumikenkahinta: 10€
 update: 2022-02-01-13:08
 products: Moottorikelkkailu, lumikengät, liukulumikengät (OAC), ahkio, porot, revontuli hetkiä, kajakki, kantorinkka, fatbike
+image01: ../images/goiglo.webp
 ---

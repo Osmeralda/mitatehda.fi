@@ -5,4 +5,5 @@ ruka: ye
 slug: https://www.facebook.com/skipubvuosseli
 kuvaus: Tule suoraan rinteestä tai hiihtoladulta viihtyisään ravintolaaamme, jossa on kodikas tunnelma.
 update: 2022-02-11-12:02
+image01: ../images/skiPubVuosseli.jpg
 ---
