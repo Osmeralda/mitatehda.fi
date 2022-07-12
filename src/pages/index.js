@@ -57,7 +57,7 @@ export default function Home({data}) {
         <h3>Valitut</h3>
         </div>
         {tekstit.map(teksti => (
-            <div className={styles.yrityslinkki}>
+            <div className={styles.yrityslinkkiFeat}>
                 <div className="space-between">
                   <div>
                     <GatsbyImage className="thumbnail" image={getImage(teksti.frontmatter.image01)} />

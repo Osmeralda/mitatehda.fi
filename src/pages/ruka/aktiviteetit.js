@@ -1,10 +1,8 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
-
 import * as styles from '../../styles/keskukset.module.css'
 import { Helmet } from 'react-helmet'
 import { Container } from 'react-bootstrap'
-
 import RukaSidebar from '../../components/RukaSidebar'
 
 

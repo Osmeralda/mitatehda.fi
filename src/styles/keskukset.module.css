@@ -26,12 +26,12 @@
     margin: 1em;
 }
 .yritykset {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 65%;
+    margin-left: 1vw;
+    margin-right: 1vw;
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: auto auto auto; 
+    grid-template-columns: 33% 33% 33%; 
+    margin-bottom: 2vw;
 }
 .yritykset h3 {
     text-align: center;
@@ -78,41 +78,64 @@
     margin-top: 4px;
 }
 .featuredTitle h3 {
+    writing-mode: vertical-lr;
     transform-origin: center;
-    transform: rotate(-90deg);
-    background-color: transparent;
+    transform: rotate(-180deg);
     color: black;
-    font-size: 5vw;
+    font-size: 6em;
     font-weight: 999;
-    margin-top: 100%;
 }
+@media (max-width: 1200px) {
+    .featuredTitle {
+        font-size: 0.6em;
+    }
+}
+
 @media (max-width: 700px) {
     .featuredTitle h3 {
-    font-size: 7vw;
+    writing-mode: horizontal-tb;
+    transform-origin: center;
+    transform: rotate(90deg);       
+    font-size: 7em;
     transform: none;
     margin-top: auto;
     text-align: center;
     }
 }
-.yrityslinkki {
-    max-width: auto;
+.yrityslinkkiFeat {
     display: grid;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
     height: 100%;
-    padding-bottom: 2vw;
     grid-template-columns: auto; 
     background: rgba(1, 1, 1, 0.9);
     box-shadow: 0 5px 5px  0 rgb(87, 87, 87);
-    word-break: break-word;
+    padding-bottom: 10px;
+}
+.yrityslinkki {
+    display: grid;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
+    grid-template-columns: auto; 
+    background: rgba(1, 1, 1, 0.9);
+    box-shadow: 0 5px 5px  0 rgb(87, 87, 87);
+    padding-bottom: 10px;
 }
 .yrityslinkki h3 {
-    font-size: 3vw;
-    font-weight: bold;
+    font-size: auto;
+    padding-left: 5%;
+    text-align: left;
+    margin: 20px auto 0px;
+    font-weight: 500;
+    color: whitesmoke;  
 }
 .yrityslinkki p {
-    font-size: 2vw;
-    font-weight: 200;
+    padding-left: 5%;
+    text-align: left;
+    color: whitesmoke;
+    margin-top: 4px;
 }
-@media (max-width: 700px ) {
+@media (max-width: 1300px ) {
     .yrityslinkki {
         display: grid;
         height: 100%;
@@ -120,15 +143,32 @@
         grid-template-columns: auto; 
         background: rgba(1, 1, 1, 0.9);
         box-shadow: 0 5px 5px  0 rgb(87, 87, 87);
+    }
+    .yrityslinkki p {
+        font-size: 1em;
+        font-weight: 200;
+    }
+    .yrityslinkki h3 {
+        font-size: 2em;
+        font-weight: bold;
+    }
+}
+@media (max-width: 700px ) {
+    .yrityslinkki {
+        display: grid;
+        height: 100%;
+        grid-template-columns: auto;
+        background: rgba(1, 1, 1, 0.9);
+        box-shadow: 0 5px 5px  0 rgb(87, 87, 87);
         word-break: break-word;
     }
     .yrityslinkki p {
-        font-size: 3vw;
+        font-size: 1em;
         font-weight: 200;
         word-break: break-word;
     }
     .yrityslinkki h3 {
-        font-size: 4vw;
+        font-size: 2em;
         font-weight: bold;
     }
 }
@@ -166,4 +206,11 @@
         min-width: 100%;
         max-height: 100px;
     }
+}
+.resortPage {
+    text-align: center;
+}
+.resortPage > h1 {
+    font-size: 5em;
+    font-weight: 900;
 }

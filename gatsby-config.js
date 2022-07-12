@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-google-adsense`,
       options: {
@@ -27,7 +28,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-transformer-remark',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,6 +40,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `yritykset`,
+        path: `${__dirname}/static/images`,
       },
     },
   ],

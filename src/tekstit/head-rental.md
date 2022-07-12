@@ -18,6 +18,7 @@ dhhinta: 29€
 slug: https://hillskirent.fi/ruka/vuokraamo/
 update: 2021-12-19-14:05
 products: Lasku-, maastohiihto välinevuokraus, Huolto, pyörävuokraus
+image01: ../images/hill-ski-rent-ruka.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo viverra maecenas accumsan lacus vel facilisis. Turpis egestas sed tempus urna. Fermentum odio eu feugiat pretium. Consectetur adipiscing elit duis tristique sollicitudin nibh. Eu volutpat odio facilisis mauris sit amet massa. Eu scelerisque felis imperdiet proin fermentum leo vel orci. Convallis tellus id interdum velit laoreet id donec ultrices. Varius duis at consectetur lorem donec massa sapien. Ac tincidunt vitae semper quis lectus nulla at volutpat. Amet nulla facilisi morbi tempus iaculis. Eu volutpat odio facilisis mauris sit amet. Auctor eu augue ut lectus arcu bibendum. In vitae turpis massa sed elementum tempus. Metus aliquam eleifend mi in. Feugiat in fermentum posuere urna nec tincidunt praesent semper feugiat.
