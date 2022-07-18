@@ -157,6 +157,7 @@ nav a.active {
     padding-top: 1vw;
     margin-left: 2vw;
     margin-right: 4vw;
+    margin-bottom: 1.5em;
 }
 @media (max-width: 1000px ) {
     .infobox {
@@ -207,6 +208,11 @@ nav a.active {
 .space-between {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+.space-between-row {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 .width100 {

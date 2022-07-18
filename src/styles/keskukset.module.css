@@ -25,6 +25,12 @@
     font-size: auto;
     margin: 1em;
 }
+.keskus > p {
+    size: auto;
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
 .yritykset {
     margin-left: 1vw;
     margin-right: 1vw;
