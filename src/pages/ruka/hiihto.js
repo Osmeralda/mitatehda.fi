@@ -1,84 +1,138 @@
-import { graphql, Link } from 'gatsby'
-import React from 'react'
-import * as styles from '../../styles/keskukset.module.css'
+import React from "react"
+import * as styles from "../../styles/keskukset.module.css"
+import { graphql, Link } from "gatsby"
+import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
-import { Container } from 'react-bootstrap'
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import Navbar from "../../components/Navbar"
+import { Button } from "react-bootstrap"
+import Footer from "../../components/Footer"
+import Info from "../../components/Info"
+import RukaSidebar from "../../components/RukaSidebar"
 
-import RukaSidebar from '../../components/RukaSidebar'
+  export default function HiihtoRuka({data}) {
 
-
-export default function LasketteluRuka({ data }) {
-    console.log(data)
     const tekstit = data.allMarkdownRemark.nodes
+    const image = getImage(data.allMarkdownRemark.file)
 
-    return (
-<div>
-    <Helmet>
+  return (
+      
+      <Container>
+                <div className="flexRow margingbottom bg">
+        <div className="flexColumn width100">
+    <Navbar />
+    </div>
+      </div>
+      <div className={styles.resortPage}>
+          <h1>
+          Murtomaa hiihtoa Rukalla!
+          </h1>
+      </div>
+
+    <div className="flexRow">
+                <div>
+                <RukaSidebar />
+                </div>
+                <Container className={styles.yritykset}>
+                {tekstit.map(teksti => (
+            <div className={styles.yrityslinkki}>
+                <div className="space-between">
+                  <div>
+                    <GatsbyImage className="thumbnail" image={getImage(teksti.frontmatter.image01)} />
+                    <h3>{ teksti.frontmatter.title }</h3>
+                    <p>Tuotteet: { teksti.frontmatter.products }</p>
+                    </div>
+                    <div className={styles.button}>
+                    <a href={teksti.frontmatter.slug} target="_blank" className="button">Vieraile </a>
+                    </div>
+                </div>
+            </div>
+        ))}
+        
+        </Container>
+
+                </div>
+                <div className="infobox">
+                <div>
+        <StaticImage className='imageInfo-skiing' src='../../images/hiihto-ruka.jpg'
+                 alt="Skier skiing on path"
+                 placeholder="blurred"
+                 objectFit="cover"
+                 objectPosition="bottom"
+                 cropFocus="SOUTHEAST"
+                   />
+        </div>
+                <div>
+                <h3>Rukan maastohiihtoreitit</h3>
+                <Link to="https://kuusamo.fluentprogress.fi/outdoors?skitrack" target="_blank" className="infoButton">Klikkaa tästä reittikarttaan</Link>
+            </div>
+            </div>
+            <div className='infobox'>
+
+                <div>
+            <h3>Riisitunturin maastohiihtoreitti (33km Rukalta)</h3>
+                <Link to="https://www.luontoon.fi/riisitunturi/talviretkeilyreitit#Riisinmonitoimireitti" target="_blank" className="infoButton">Klikkaa tästä reittikarttaan</Link>
+                </div>
+                <div>
+        <StaticImage className='imageInfo-skiing' src='../../images/hiihto-riisi.jpg' 
+                 alt="Skier skiing in forest"
+                 placeholder="blurred"
+                 objectFit="cover"
+                 objectPosition="bottom"
+                 cropFocus="SOUTHEAST"
+                   />
+        </div>
+                </div>
+
+                <div>
+         <Footer />
+         </div>
+
+
+
+
+                <Helmet>
         <title>MitäTehdä.fi Ruka</title>
-        <meta name="description" content="Kaikki Rukan maastohiihtovuokraamot kätevästi yhdellä sivulla!" />
-        <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, vaellusreitit, kävelyreitit, kaupat, vuokraamot, ravintolat, laskettelu, hiihto, paljut, elämykset, elämys" />
+        <meta name="description" content="Jokainen Rukan aktiviteetti, reitti sekä vuokraamo kätevästi yhdellä sivulla!" />
+        <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, vaellusreitit, kävelyreitit, kaupat, vuokraamot, ravintolat, laskettelu, paljut, elämykset, elämys" />
         <meta property="og:title" content="MitäTehdä.fi" />
         <meta property="og:type" content="Kaikki pohjois-Suomen aktiviteetit listattuna" />
         <meta property='og:image' content='' />
         <meta property='og:locale' content='fi_FI' />
-        <meta property='og:url' content='www.mitatehda.fi/ruka/hiihto' />
-        <link rel="canonical" href="www.mitatehda.fi/ruka/hiihto" />
+        <meta property='og:url' content='www.mitatehda.fi/ruka/' />
+        <link rel="canonical" href="www.mitatehda.fi/ruka/" />
     </Helmet>
-    <div>
-            <RukaSidebar />
-
-                <div className={styles.keskus}>
-                    <Container>
-                    <h1>Rukan Maastohiihtoväline vuokraamot</h1>
-                    </Container>
-                
-                
-                <Container className={styles.yritykset}>
-                    {tekstit.map(teksti => (
-                        <Link to={teksti.frontmatter.slug} key={teksti.id} target="_blank" className={styles.yrityslinkki}>
-                            <div>
-                                <h3>{ teksti.frontmatter.title }</h3>
-                                <p>3h välinesetti: { teksti.frontmatter.xchinta }</p>
-                                <p>Tuotteet: { teksti.frontmatter.products }</p>
-                            </div>    
-                        </Link>
-                    ))}         
-                                </Container> 
-                                
-
-            <div className={styles.keskus}>
-                <h3>Rukan maastohiihtoreitit</h3>
-                <Link to="https://kuusamo.fluentprogress.fi/outdoors?skitrack" target="_blank" className={styles.btn}>Klikkaa tästä reittikarttaan</Link>
-                <h3>Riisitunturin maastohiihtoreitti (33km Rukalta)</h3>
-                <Link to="https://www.luontoon.fi/riisitunturi/talviretkeilyreitit#Riisinmonitoimireitti" target="_blank" className={styles.btn}>Klikkaa tästä reittikarttaan</Link>
-            </div>
-            </div> 
-            </div>   
-            </div>
-
+        </Container>    
     )
 }
 
-// export page query
-
 export const query = graphql`
 query hiihtoRuka {
-    allMarkdownRemark(
-        sort: {order: ASC, fields: frontmatter___update}
-        filter: {frontmatter: {xcski: {eq: "ye"}, ruka: {eq: "ye"}}}
-      ) {
-        nodes {
-          frontmatter {
-            hinta
-            slug
-            title
-            ruka
-            xcski
-            xchinta
-            update
-            products
+  allMarkdownRemark(
+    sort: {order: ASC, fields: frontmatter___update}
+    filter: {frontmatter: {xcski: {eq: "ye"}, ruka: {eq: "ye"}}}
+  ) {
+    nodes {
+      frontmatter {
+        slug
+        title
+        ruka
+        update
+        featured
+        products
+        image01 {
+          childImageSharp {
+            gatsbyImageData(
+              width: 700
+              height: 400
+              blurredOptions: {width: 200}
+              transformOptions: {cropFocus: CENTER}
+              placeholder: BLURRED
+            )
           }
         }
       }
-    }    
-    `
+    }
+}
+}
+  `

@@ -12,7 +12,7 @@ export default function Yhteystiedot({data}) {
 
     return (
         <Container>
-        <div className="flexRow margingbottom bg space-between-row">
+        <div className="flexRow margingbottom bg">
           <div className="flexColumn">
       <Navbar />
       <div className={styles.keskus}>

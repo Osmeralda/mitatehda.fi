@@ -1,22 +1,88 @@
-import { graphql, Link } from 'gatsby'
-import React from 'react'
-
-import * as styles from '../../styles/keskukset.module.css'
-
+import React from "react"
+import * as styles from "../../styles/keskukset.module.css"
+import { graphql, Link } from "gatsby"
+import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
-import { Container } from 'react-bootstrap'
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import Navbar from "../../components/Navbar"
+import { Button } from "react-bootstrap"
+import Footer from "../../components/Footer"
+import Info from "../../components/Info"
+import RukaSidebar from "../../components/RukaSidebar"
 
-import RukaSidebar from '../../components/RukaSidebar'
 
-
-export default function LasketteluRuka({ data }) {
+export default function RentoutuminenRuka({ data }) {
     console.log(data)
     const hyvinvointi = data.hyvinvointi.nodes
     const avanto = data.avanto.nodes
+    const image = getImage(data.hyvinvointi.file)
 
     return (
+                <Container>
+                <div className="flexRow margingbottom bg">
+        <div className="flexColumn width100">
+    <Navbar />
+    </div>
+      </div>
+      <div className={styles.resortPage}>
+          <h1>
+          Rukan hyvinvointi ja kauneusyritykset!
+          </h1>
+      </div>
+      <div className="flexRow">
         <div>
-    <Helmet>
+      <RukaSidebar /> 
+      </div>
+      <div className="flexColumn">
+      <Container className={styles.yritykset}>
+                {hyvinvointi.map(teksti => (
+            <div className={styles.yrityslinkki}>
+                <div className="space-between">
+                  <div>
+                    <GatsbyImage className="thumbnail" image={getImage(teksti.frontmatter.image01)} />
+                    <h3>{ teksti.frontmatter.title }</h3>
+                    <p>{ teksti.frontmatter.kuvaus }</p>
+                    </div>
+                    <div className={styles.button}>
+                    <a href={teksti.frontmatter.slug} target="_blank" className="button">Vieraile </a>
+                    </div>
+                </div>
+            </div>
+        ))}
+        </Container>
+
+          <div>
+      <div className={styles.resortPage}>
+          <h1>
+          Rukan upeat avannot!
+          </h1>
+      </div>
+                        </div>
+              <Container className={styles.yritykset}>
+              {avanto.map(teksti => (
+          <div className={styles.yrityslinkki}>
+              <div className="space-between">
+                <div>
+                  <GatsbyImage className="thumbnail" image={getImage(teksti.frontmatter.image01)} />
+                  <h3>{ teksti.frontmatter.title }</h3>
+                  <p>{ teksti.frontmatter.kuvaus }</p>
+                  </div>
+                  <div className={styles.button}>
+                  <a href={teksti.frontmatter.slug} target="_blank" className="button">Vieraile </a>
+                  </div>
+              </div>
+          </div>
+      ))}
+      
+      </Container>
+
+      </div>
+
+       </div>
+        <div>
+        <Footer />
+        </div> 
+        <Helmet>
         <title>MitäTehdä.fi Ruka</title>
         <meta name="description" content="Kaikki Rukan ravintolat kätevästi yhdellä sivulla!" />
         <meta name="keywords" content="Pohjois-Suomi, Ruka, Kuusamo, vaellusreitit, kävelyreitit, kaupat, vuokraamot, ravintolat, laskettelu, hiihto, paljut, elämykset, elämys" />
@@ -26,46 +92,8 @@ export default function LasketteluRuka({ data }) {
         <meta property='og:locale' content='fi_FI' />
         <meta property='og:url' content='www.mitatehda.fi/ruka/ravintolat' />
         <link rel="canonical" href="www.mitatehda.fi/ruka/ravintolat" />
-    </Helmet>
-            <RukaSidebar />
-
-                <div className={styles.keskus}>
-                    <Container>
-                    <h1>Rukan hyvinvointi ja kauneusyritykset</h1>
-                    </Container>
-                </div>
-                
-                <div className={styles.yritykset}>
-                    {hyvinvointi.map(teksti => (
-                        <Link to={teksti.frontmatter.slug} key={teksti.id} target="_blank" className={styles.yrityslinkki}>
-                            <div>
-                                <h3>{ teksti.frontmatter.title }</h3>
-                                <p>{ teksti.frontmatter.products }</p>
-                            </div>
-                        </Link>
-                    ))}
-                     </div>     
-
-                <div className={styles.keskus}>
-                    <Container>
-                        <h3>Avanto</h3>
-                        <p>Rukan alueen mahtavat avannot.</p>
-                        <p>Pulahda virkistävään avantoon jonka jälkeen pääset lämpimään saunaan!</p>
-                        </Container>
-                        </div>     
-
-                    <div className={styles.yritykset}>
-                    {avanto.map(teksti => (
-                        <Link to={teksti.frontmatter.slug} key={teksti.id} target="_blank" className={styles.yrityslinkki}>
-                            <div>
-                                <h3>{ teksti.frontmatter.title }</h3>
-                                <p>{ teksti.frontmatter.products }</p>
-                            </div>
-                        </Link> 
-                        ))}
-                        </div>  
-
-                        </div>   
+    </Helmet>    
+       </Container>                 
     )
 }
 
@@ -86,9 +114,20 @@ query rentoutuminenRuka {
             rentoutuminen
             update
             products
+            image01 {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 700
+                  height: 400
+                  blurredOptions: {width: 200}
+                  transformOptions: {cropFocus: CENTER}
+                  placeholder: BLURRED
+                )
+              }
           }
         }
       }
+    }
       avanto: allMarkdownRemark(
         sort: {order: ASC, fields: frontmatter___update}
         filter: {frontmatter: {avanto: {eq: "ye"}, ruka: {eq: "ye"}}}
@@ -100,8 +139,19 @@ query rentoutuminenRuka {
             ruka
             update
             avanto
+            image01 {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 700
+                  height: 400
+                  blurredOptions: {width: 200}
+                  transformOptions: {cropFocus: CENTER}
+                  placeholder: BLURRED
+                )
+              }
           }
         }
       }
-    }    
+    }  
+  }  
     `

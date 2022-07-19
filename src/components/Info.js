@@ -12,7 +12,10 @@ export default function Info() {
         </div>
         <div>
           <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum, nisi non fringilla tempus, justo ipsum pharetra tortor, et imperdiet risus nibh quis nibh. Aenean ut sollicitudin tellus, at lobortis quam. Integer mattis vulputate odio et molestie. Nullam ut leo ornare, pretium diam porta, egestas est. Sed ac turpis id risus gravida molestie nec id turpis. Fusce sit amet mauris mi. Vivamus suscipit maximus diam, eu euismod leo blandit non. Sed condimentum, massa at laoreet suscipit, leo enim dapibus ligula, sed convallis lorem enim at lacus. Sed at dui a metus tempus porta. Quisque quis turpis risus. Vivamus sollicitudin eros.
+          Moikka!
+          </p>
+          <p>
+          Olen Oskari Kurtti ja olen luonut tämän sivun harjoituksena itselleni sekä auttaakseni näyttämään Rukan alueen mahtavia yrityksiä kaikille. Tarkoituksena olisi että näiltä sivuilta löytyisi jokainen Rukan alueen yritys, joka helpottaisi matkailijoita nauttimaan ajastaan Rukalla.</p><p> Tällä hetkellä olen keskittynyt vain talvikauteen, mutta ensi kesäksi olisi tarkoitus saada myös kasvavan kesäsesongin tarjonta mukaan. Jos olet Rukan alueen yrittäjä ja haluaisit yrityksesi näkyviin sivuille tai korjata yrityksesi tietoja/kuvaa olethan yhteydessä Facebookin kautta. Tai jos olet yritys joka haluaisi esittelyn tällä paikalla tai "valitut" osiossa olethan yhteydessä. Haluaisin mielellään korvata oman kuvani jollain järkevämmällä ja käyttäjiä palvelevalla sisällöllä!
           </p>
           <Button href='https://www.facebook.com/Mit%C3%A4Tehd%C3%A4fi-104893475469082' className="infoButton">Ota yhteyttä!</Button>
         </div>
