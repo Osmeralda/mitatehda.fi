@@ -175,10 +175,10 @@ nav a.active {
     margin-bottom: 1.5em;
 }
 .infobox h3 {
-    font-size: 1em;
+    font-size: 2em;
     padding-top: 1vw;
     margin-left: 2vw;
-    margin-right: 4vw;
+    margin-right: 2vw;
     margin-bottom: 1.5em;
 }
 .infobox p {
@@ -187,6 +187,24 @@ nav a.active {
     margin-left: 2vw;
     margin-right: 4vw;
     margin-bottom: 1.5em;
+}
+@media (max-width: 1100px) {
+    .infobox h3 {
+        font-size: 1.8em;
+        padding-top: 1vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-bottom: 1.5em;
+    }
+}
+@media (max-width: 1030px) {
+    .infobox h3 {
+        font-size: 1.6em;
+        padding-top: 1vw;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-bottom: 1.5em;
+    }
 }
 @media (max-width: 700px) {
     .infobox p {
