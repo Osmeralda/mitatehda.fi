@@ -1,5 +1,5 @@
 ---
-title: FC Kuusamon kuntoilijanaiset
+title: FC Kuusamon kuntoilija naiset
 image01: ../images/fckuusamo.webp
 ruka: ye
 aktiviteetti: ye

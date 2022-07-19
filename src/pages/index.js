@@ -14,7 +14,7 @@ import Info from "../components/Info"
 export default function Home({data}) {
 
   const tekstit = data.allMarkdownRemark.nodes
-  const image = getImage(data.allMarkdownRemark.file)
+  //const image = getImage(data.allMarkdownRemark.file)
 
   return (
     <Container>

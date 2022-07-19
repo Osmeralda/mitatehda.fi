@@ -5,15 +5,13 @@ import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import Navbar from "../../components/Navbar"
-import { Button } from "react-bootstrap"
 import Footer from "../../components/Footer"
-import Info from "../../components/Info"
 import RukaSidebar from "../../components/RukaSidebar"
 
   export default function KelkkaRuka({data}) {
 
     const tekstit = data.allMarkdownRemark.nodes
-    const image = getImage(data.allMarkdownRemark.file)
+    //const image = getImage(data.allMarkdownRemark.file)
 
   return (
       

@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from '../styles/keskukset.module.css'
-import { graphql, Link } from "gatsby"
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Info from "../components/Info"

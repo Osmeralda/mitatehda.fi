@@ -5,15 +5,13 @@ import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import Navbar from "../../components/Navbar"
-import { Button } from "react-bootstrap"
 import Footer from "../../components/Footer"
-import Info from "../../components/Info"
 import RukaSidebar from "../../components/RukaSidebar"
 
   export default function LasketteluRuka({data}) {
 
     const tekstit = data.allMarkdownRemark.nodes
-    const image = getImage(data.allMarkdownRemark.file)
+    //const image = getImage(data.allMarkdownRemark.file)
 
   return (
       
@@ -63,13 +61,13 @@ import RukaSidebar from "../../components/RukaSidebar"
                    />
         </div>
                 <div>
-                <h3>Rukan rinnekartta</h3>
+                <h2>Rukan rinnekartta</h2>
                 <Link to="https://www.ruka.fi/fi/hiihtokeskus/rinteet" target="_blank" className="infoButton">Klikkaa tästä reittikarttaan</Link>
             </div>
             </div>
-            <div className='infobox'>
+            <div className='infobox justify-content-end'>
                 <div>
-            <h3>Osta hissiliput Rukan sivuilta</h3>
+            <h2>Osta hissiliput Rukan sivuilta</h2>
                 <Link to="https://www.ruka.fi/fi/hiihtokeskus/hissiliput" target="_blank" className="infoButton">Klikkaa tästä reittikarttaan</Link>
                 </div>
                 <div>

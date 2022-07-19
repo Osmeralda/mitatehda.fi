@@ -5,15 +5,13 @@ import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import Navbar from "../../components/Navbar"
-import { Button } from "react-bootstrap"
 import Footer from "../../components/Footer"
-import Info from "../../components/Info"
 import RukaSidebar from "../../components/RukaSidebar"
 
   export default function HiihtoRuka({data}) {
 
     const tekstit = data.allMarkdownRemark.nodes
-    const image = getImage(data.allMarkdownRemark.file)
+    //const image = getImage(data.allMarkdownRemark.file)
 
   return (
       
@@ -67,7 +65,7 @@ import RukaSidebar from "../../components/RukaSidebar"
                 <Link to="https://kuusamo.fluentprogress.fi/outdoors?skitrack" target="_blank" className="infoButton">Klikkaa tästä reittikarttaan</Link>
             </div>
             </div>
-            <div className='infobox'>
+            <div className='infobox justify-content-end'>
 
                 <div>
             <h3>Riisitunturin maastohiihtoreitti (33km Rukalta)</h3>

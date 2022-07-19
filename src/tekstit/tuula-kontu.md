@@ -1,5 +1,5 @@
 ---
-title: HIERONTA & WELLNESSPALVELUT TUULA KONTU OY
+title: HIERONTA & WELLNESS PALVELUT TUULA KONTU OY
 rentoutuminen: ye
 ruka: ye
 slug: https://www.hierojatuulakontu.fi/

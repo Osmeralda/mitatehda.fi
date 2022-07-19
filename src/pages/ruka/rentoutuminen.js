@@ -1,13 +1,11 @@
 import React from "react"
 import * as styles from "../../styles/keskukset.module.css"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Navbar from "../../components/Navbar"
-import { Button } from "react-bootstrap"
 import Footer from "../../components/Footer"
-import Info from "../../components/Info"
 import RukaSidebar from "../../components/RukaSidebar"
 
 
@@ -15,7 +13,7 @@ export default function RentoutuminenRuka({ data }) {
     console.log(data)
     const hyvinvointi = data.hyvinvointi.nodes
     const avanto = data.avanto.nodes
-    const image = getImage(data.hyvinvointi.file)
+
 
     return (
                 <Container>

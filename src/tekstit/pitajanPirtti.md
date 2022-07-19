@@ -1,5 +1,5 @@
 ---
-title: Pitäjän pirtti Ravintola ja Matkamuistomyymälä
+title: Pitäjän pirtti
 ravintola: ye
 kauppa: ye
 ruka: ye
