@@ -218,7 +218,7 @@
 }
 .btnFrontPage {
     font-family:inherit;
-    font-size: 2vw;
+    font-size: 2rem;
     font-weight: 600;
     background: transparent;
     color: tomato;
@@ -232,7 +232,7 @@
 }
 @media (max-width: 700px ) {
     .btnFrontPage {
-        font-size: 3vw;
+        font-size: 1rem;
         border: solid 2px tomato;
     }
 }

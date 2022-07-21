@@ -97,7 +97,7 @@ nav a.active {
     align-items:baseline
 }
 .footerP {
-    font-size: 2.5vw;
+    font-size: 2em;
     font-weight: bold;
 }
 .footerCopyRight {
@@ -107,6 +107,21 @@ nav a.active {
 .footerLink {
     font-size: 2em;
     font-weight: bold;
+}
+@media (max-width: 700px) {
+    .footerP {
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 700px) {
+    .footerLink {
+        font-size: 1em;
+    }
+}
+@media (max-width: 700px) {
+    .footerCopyRight {
+        font-size: 0.5em;
+    }
 }
 .drpdwn {
     margin-left: 6vw;
@@ -131,12 +146,20 @@ nav a.active {
     list-style-type: none;
 }
 .liSidebar {
+    margin: 0.8em;
+    border: solid 4px tomato;
+}
+.linkSidebar {
     padding: 0.8em;
     font-size: 1em;
     font-weight: bold;
 }
-.liSidebar:hover {
+.linkSidebar:hover {
     background-color: tomato;
+}
+.width100side {
+    width: 100%;
+    display: block;
 }
 .liHead {
     padding: 0.5em;

@@ -25,7 +25,7 @@ export default function Home({data}) {
           <h1>
           Löydä kaikki aktiviteetit Rukalta!
           </h1>
-          <Button to="/ruka" className={styles.btnFrontPage}>Aktiviteetteihin</Button>
+          <Link to="/ruka" className={styles.btnFrontPage}>Aktiviteetteihin</Link>
       </div>
       </div>
     <Helmet>
