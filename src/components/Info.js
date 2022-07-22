@@ -8,7 +8,12 @@ export default function Info() {
   return (
     <div className='infobox'>
     <div>
-        <StaticImage className='imageInfo' src='../images/OskariKurtti1.jpg' />
+        <StaticImage 
+        className='imageInfo' 
+        src='../images/oskari2.jpg' 
+        width={1600}
+        height={1600}
+        />
         </div>
         <div>
           <p>

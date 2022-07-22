@@ -23,11 +23,11 @@ module.exports = {
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
-        typekit: {
-          id: process.env.TYPEKIT_ID,
-        },
+        google: {
+          families: ['Montserrat', 'sans-serif']
+        }
+        }
       },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
