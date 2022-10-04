@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Info from "../components/Info"
 import Layout from "../components/Layout"
+import Weather from "../components/Weather"
 
 
 
@@ -74,6 +75,9 @@ export default function Home({data}) {
          </div>
          <Link to="/ruka" className="seeMore">Katso lisää +</Link>  
          </div>
+         </div>
+         <div>
+          <Weather />
          </div>
          <div>
          <Info />
