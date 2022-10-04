@@ -13,7 +13,6 @@ function Layout({ children }) {
     declineButtonText="Decline"
     cookieName="gatsby-gdpr-google-analytics"
     expires={180}
-    debug={true}
     style={{background: "white"}}
     buttonStyle={{ background:"green", fontWeight:"bold" }}
     declineButtonStyle={{ fontWeight: "bold"}}>
