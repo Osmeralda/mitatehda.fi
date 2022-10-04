@@ -7,6 +7,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import RukaSidebar from "../../components/RukaSidebar"
+import Layout from "../../components/Layout"
 
   export default function LumikenkaRuka({data}) {
 
@@ -14,7 +15,7 @@ import RukaSidebar from "../../components/RukaSidebar"
     //const image = getImage(data.allMarkdownRemark.file)
 
   return (
-      
+      <Layout>
       <Container>
                 <div className="flexRow margingbottom bg">
         <div className="flexColumn width100">
@@ -66,7 +67,8 @@ import RukaSidebar from "../../components/RukaSidebar"
         <meta property='og:url' content='www.mitatehda.fi/ruka/' />
         <link rel="canonical" href="www.mitatehda.fi/ruka/" />
     </Helmet>
-        </Container>    
+        </Container> 
+        </Layout>   
     )
 }
 

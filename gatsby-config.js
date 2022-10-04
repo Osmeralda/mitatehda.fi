@@ -49,6 +49,17 @@ module.exports = {
         path: `${__dirname}/static/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'G-SCCB7814Q9',
+          cookieName: "gatsby-gdpr-google-analytics",
+          anonymize: true, 
+          allowAdFeatures: false,
+        },
+      },
+    },
   ],
   siteMetadata: {
     title: 'MitäTehdä.fi',

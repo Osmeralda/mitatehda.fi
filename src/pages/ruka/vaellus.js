@@ -7,6 +7,7 @@ import Footer from "../../components/Footer"
 import RukaSidebar from "../../components/RukaSidebar"
 import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
+import Layout from '../../components/Layout'
 
 
 export default function LasketteluRuka({ data }) {
@@ -14,7 +15,7 @@ export default function LasketteluRuka({ data }) {
     
 
     return (
-
+<Layout>
         <Container>
         <div className="flexRow margingbottom bg">
     <div className="flexColumn width100">
@@ -128,6 +129,6 @@ export default function LasketteluRuka({ data }) {
         <link rel="canonical" href="www.mitatehda.fi/ruka/vaellus" />
     </Helmet>
            </Container>
-                  
+           </Layout>
     )
 }

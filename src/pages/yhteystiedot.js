@@ -7,10 +7,12 @@ import Footer from "../components/Footer"
 import Info from "../components/Info"
 import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
+import Layout from '../components/Layout'
 
 export default function Yhteystiedot({data}) {
 
     return (
+      <Layout>
         <Container>
         <div className="flexRow margingbottom bg">
           <div className="flexColumn">
@@ -48,6 +50,7 @@ export default function Yhteystiedot({data}) {
            <Footer />
            </div>
            </Container>
+           </Layout>
     )
 }
 export const query = graphql`

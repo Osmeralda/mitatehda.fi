@@ -5,9 +5,9 @@ import { Container } from "reactstrap"
 import { Helmet } from 'react-helmet'
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import Navbar from "../components/Navbar"
-import { Button } from "react-bootstrap"
 import Footer from "../components/Footer"
 import Info from "../components/Info"
+import Layout from "../components/Layout"
 
 
 
@@ -17,6 +17,7 @@ export default function Home({data}) {
   //const image = getImage(data.allMarkdownRemark.file)
 
   return (
+    <Layout>
     <Container>
       <div className="flexRow margingbottom bg">
         <div className="flexColumn">
@@ -81,6 +82,7 @@ export default function Home({data}) {
          <Footer />
          </div>
          </Container>
+         </Layout>
   )
 }
 // export page query
