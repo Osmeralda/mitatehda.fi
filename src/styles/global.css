@@ -41,6 +41,16 @@ nav {
     align-items: baseline;
     flex-direction: row;
 }
+nav button {
+    background-color: transparent;
+    border: none;
+    margin-left: 2vw;
+    font-size: 1em;
+    font-weight: bold;
+}
+nav button:hover {
+    border-bottom: solid 3px tomato;
+}
 .links {
     display: flex;
     flex-direction: row;

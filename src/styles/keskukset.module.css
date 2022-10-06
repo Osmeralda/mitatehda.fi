@@ -264,3 +264,80 @@
         font-weight: 900;
     }
 }
+.button{
+    color: tomato;
+    border: none;
+    font-weight: 300;
+    margin-left: 5%;
+}
+.button:hover {
+    color: white;
+}
+.news {
+    list-style-type: none;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    justify-content: space-between;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    text-overflow: ellipsis;
+}
+@media (max-width: 750px) {
+    .news {
+        font-size: 1em;
+    }
+        }
+.news li {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    background: rgba(1, 1, 1, 0.9);
+    box-shadow: 0 5px 5px  0 rgb(87, 87, 87);
+}
+@media (max-width: 750px) {
+    .news li {
+        font-size: 1em;
+        flex-direction: column;
+    }
+        }
+.news img {
+    height: 100%;
+}
+@media (max-width: 750px) {
+.news img {
+    width: 100%;
+}
+}
+.news a {
+    color: tomato;
+    margin-right: 2em;
+}
+.news a:hover {
+    color: white;
+}
+.white {
+    color: white;
+    margin-top: 0.5em;
+    margin-left: 2em;
+}
+.weatherMain {
+    display: flex;
+    flex-direction: Column;
+    width: max-content;
+}
+.weatherMain h2 {
+    font-size: 1em;
+}
+.weatherMain h3 {
+    font-size: 1em;
+}
+.weatherSecondary {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    align-items: center;
+}
+.weatherIcon {
+    filter:  drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}

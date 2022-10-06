@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import * as styles from '../styles/global.css'
 import { StaticImage } from 'gatsby-plugin-image'
+import Weather from './Weather'
 
 export default function Navbar() {
     const data = useStaticQuery(graphql`
@@ -27,6 +28,7 @@ export default function Navbar() {
             <li><Link to="/" className='title'>{title}</Link></li>
             <li><Link to="/ruka" className='li' activeClassName={"active"}>Ruka</Link></li>
             <li><Link to="/yhteystiedot" className='li' activeClassName={"active"}>Yhteystiedot</Link></li>
+            <Weather />
             </ul>
             </div>
             <div>

@@ -9,6 +9,7 @@ import Footer from "../components/Footer"
 import Info from "../components/Info"
 import Layout from "../components/Layout"
 import Weather from "../components/Weather"
+import News from "../components/News"
 
 
 
@@ -77,7 +78,7 @@ export default function Home({data}) {
          </div>
          </div>
          <div>
-          <Weather />
+          <News />
          </div>
          <div>
          <Info />
